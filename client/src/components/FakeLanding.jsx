@@ -10,43 +10,43 @@ export default function FakeLanding() {
       <header className="border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-orange-600 flex items-center justify-center">
               <span className="text-white font-bold text-lg">H</span>
             </div>
             <div>
-              <p className="font-bold text-gray-900 text-lg leading-tight">Hanger Clinic</p>
+              <p className="font-bold text-gray-900 text-lg leading-tight">Hangerr Clinic</p>
               <p className="text-xs text-gray-500">Prosthetics & Orthotics</p>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
-            <a href="#" className="hover:text-blue-700">About</a>
-            <a href="#" className="hover:text-blue-700">Services</a>
-            <a href="#" className="hover:text-blue-700">Patients</a>
-            <a href="#" className="hover:text-blue-700">Blog</a>
-            <a href="#" className="hover:text-blue-700">Contact</a>
+            <a href="#" className="hover:text-orange-600">About</a>
+            <a href="#" className="hover:text-orange-600">Services</a>
+            <a href="#" className="hover:text-orange-600">Patients</a>
+            <a href="#" className="hover:text-orange-600">Blog</a>
+            <a href="#" className="hover:text-orange-600">Contact</a>
           </nav>
           <div className="flex items-center gap-3">
-            <span className="text-sm font-semibold text-blue-700 hidden sm:block">1 (877) 442-6437</span>
-            <button className="px-4 py-2 bg-blue-700 text-white text-sm font-semibold rounded-md hover:bg-blue-800 transition-colors">
+            <span className="text-sm font-semibold text-orange-600 hidden sm:block">1 (877) 442-6437</span>
+            <button className="px-4 py-2 bg-orange-600 text-white text-sm font-semibold rounded-md hover:bg-orange-700 transition-colors">
               Request Appointment
             </button>
           </div>
         </div>
       </header>
 
-      <section className="bg-gradient-to-br from-blue-800 to-blue-900 text-white">
+      <section className="bg-gradient-to-br from-orange-700 to-orange-800 text-white">
         <div className="max-w-6xl mx-auto px-4 py-20 md:py-28">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-5xl font-bold leading-tight">
               The Leading Provider of Orthotic and Prosthetic Care
             </h1>
-            <p className="mt-5 text-lg text-blue-100 leading-relaxed">
+            <p className="mt-5 text-lg text-orange-100 leading-relaxed">
               With the largest network of highly skilled orthotists and prosthetists, 
-              Hanger Clinic is committed to delivering personalized care and innovative 
+              Hangerr Clinic is committed to delivering personalized care and innovative 
               technology to transform lives.
             </p>
             <div className="mt-8 flex gap-4">
-              <button className="px-6 py-3 bg-white text-blue-800 font-semibold rounded-md hover:bg-blue-50 transition-colors">
+              <button className="px-6 py-3 bg-white text-orange-700 font-semibold rounded-md hover:bg-orange-50 transition-colors">
                 About Us
               </button>
               <button className="px-6 py-3 border border-white/40 text-white font-semibold rounded-md hover:bg-white/10 transition-colors">
@@ -66,12 +66,12 @@ export default function FakeLanding() {
               { title: 'Pediatrics', desc: 'Specialized care for children including scoliosis bracing, cranial helmets, and pediatric prosthetics.' },
             ].map((s, i) => (
               <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
-                  <div className="w-6 h-6 rounded-full bg-blue-700" />
+                <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
+                  <div className="w-6 h-6 rounded-full bg-orange-600" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">{s.title}</h3>
                 <p className="mt-2 text-sm text-gray-600 leading-relaxed">{s.desc}</p>
-                <a href="#" className="mt-3 inline-block text-sm font-semibold text-blue-700 hover:underline">Learn More →</a>
+                <a href="#" className="mt-3 inline-block text-sm font-semibold text-orange-600 hover:underline">Learn More →</a>
               </div>
             ))}
           </div>
@@ -82,14 +82,14 @@ export default function FakeLanding() {
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900">Empowering Human Potential</h2>
           <p className="mt-4 text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            At Hanger Clinic, we care for our patients like family, working together to deliver 
+            At Hangerr Clinic, we care for our patients like family, working together to deliver 
             the best possible orthotic and prosthetic outcomes. With more than 900 locations 
             across the country, we create customized solutions for people of all ages.
           </p>
           <div className="mt-12 grid md:grid-cols-3 gap-8">
             {stats.map((s, i) => (
               <div key={i}>
-                <p className="text-4xl font-bold text-blue-700">{s.value}</p>
+                <p className="text-4xl font-bold text-orange-600">{s.value}</p>
                 <p className="mt-1 text-sm text-gray-500">{s.label}</p>
               </div>
             ))}
@@ -102,10 +102,10 @@ export default function FakeLanding() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center">
                   <span className="text-white font-bold">H</span>
                 </div>
-                <span className="font-bold text-white">Hanger Clinic</span>
+                <span className="font-bold text-white">Hangerr Clinic</span>
               </div>
               <p className="text-sm leading-relaxed">Prosthetics & Orthotics</p>
             </div>
@@ -123,7 +123,7 @@ export default function FakeLanding() {
             ))}
           </div>
           <div className="mt-10 pt-6 border-t border-gray-800 text-xs text-gray-500 flex flex-col sm:flex-row justify-between gap-2">
-            <p>©2026 Hanger Clinic. All Rights Reserved.</p>
+            <p>©2026 Hangerr Clinic. All Rights Reserved.</p>
             <div className="flex gap-4">
               <a href="#" className="hover:text-white">Privacy Policy</a>
               <a href="#" className="hover:text-white">Terms of Use</a>
