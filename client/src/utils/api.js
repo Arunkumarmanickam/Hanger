@@ -14,7 +14,15 @@ function getStoredPlaylists() {
 }
 
 function savePlaylists(playlists) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(playlists))
+  const userPlaylists = playlists.filter(p => !p.isBuiltIn)
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(userPlaylists))
+}
+
+async function getBuiltInPlaylists() {
+  try {
+    const data = await loadCatalog()
+    return (data.playlists || []).map(p => ({ ...p, isBuiltIn: true }))
+  } catch { return [] }
 }
 
 export async function loadCatalog() {
@@ -79,7 +87,9 @@ export function getThumbnailUrl(track) {
 }
 
 export async function getPlaylists() {
-  return getStoredPlaylists()
+  const [builtIn, user] = await Promise.all([getBuiltInPlaylists(), getStoredPlaylists()])
+  const userIds = new Set(user.map(p => p.id))
+  return [...builtIn.filter(p => !userIds.has(p.id)), ...user]
 }
 
 export async function createPlaylist(name, description) {
@@ -97,14 +107,15 @@ export async function createPlaylist(name, description) {
 }
 
 export async function getPlaylist(id) {
-  const playlists = getStoredPlaylists()
-  return playlists.find(p => p.id === id) || null
+  const [builtIn, user] = await Promise.all([getBuiltInPlaylists(), getStoredPlaylists()])
+  return [...builtIn, ...user].find(p => p.id === id) || null
 }
 
 export async function addTrackToPlaylist(playlistId, track) {
   const playlists = getStoredPlaylists()
   const playlist = playlists.find(p => p.id === playlistId)
   if (!playlist) return null
+  if (playlist.isBuiltIn) return null
   playlist.tracks.push(track)
   savePlaylists(playlists)
   return playlist
@@ -114,6 +125,7 @@ export async function removeTrackFromPlaylist(playlistId, trackId) {
   const playlists = getStoredPlaylists()
   const playlist = playlists.find(p => p.id === playlistId)
   if (!playlist) return null
+  if (playlist.isBuiltIn) return null
   playlist.tracks = playlist.tracks.filter(t => t.id !== trackId)
   savePlaylists(playlists)
   return playlist
@@ -121,5 +133,7 @@ export async function removeTrackFromPlaylist(playlistId, trackId) {
 
 export async function deletePlaylist(id) {
   const playlists = getStoredPlaylists()
+  const target = playlists.find(p => p.id === id)
+  if (target?.isBuiltIn) return
   savePlaylists(playlists.filter(p => p.id !== id))
 }

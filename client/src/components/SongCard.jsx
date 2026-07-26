@@ -31,7 +31,7 @@ export default function SongCard({ track, index, onPlay, isInPlaylist, onRemove 
     e.stopPropagation()
     try {
       const data = await getPlaylists()
-      setPlaylists(data)
+      setPlaylists(data.filter(p => !p.isBuiltIn))
     } catch (err) {
       console.error('Failed to load playlists:', err)
     }

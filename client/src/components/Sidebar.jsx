@@ -106,12 +106,14 @@ export default function Sidebar({ activeView, setActiveView, refreshPlaylists })
                 <ListMusic size={15} className="flex-shrink-0" />
                 <span className="truncate flex-1 text-left">{pl.name}</span>
                 <span className="text-[10px] text-hanger-muted/30">{pl.tracks.length}</span>
-                <button
-                  onClick={(e) => handleDeletePlaylist(e, pl.id)}
-                  className="opacity-0 group-hover:opacity-100 text-hanger-muted/30 hover:text-red-400 transition-all text-xs"
-                >
-                  ×
-                </button>
+                {!pl.isBuiltIn && (
+                  <button
+                    onClick={(e) => handleDeletePlaylist(e, pl.id)}
+                    className="opacity-0 group-hover:opacity-100 text-hanger-muted/30 hover:text-red-400 transition-all text-xs"
+                  >
+                    ×
+                  </button>
+                )}
               </button>
             ))}
           </div>

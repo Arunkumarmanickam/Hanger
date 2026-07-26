@@ -106,12 +106,14 @@ export default function PlaylistView({ playlistId, setActiveView, refreshPlaylis
               Play All
             </button>
           )}
-          <button
-            onClick={handleDeletePlaylist}
-            className="p-3 rounded-xl text-hanger-muted/40 hover:text-red-400 hover:bg-hanger-hover/40 transition-all"
-          >
-            <Trash2 size={15} />
-          </button>
+          {!playlist.isBuiltIn && (
+            <button
+              onClick={handleDeletePlaylist}
+              className="p-3 rounded-xl text-hanger-muted/40 hover:text-red-400 hover:bg-hanger-hover/40 transition-all"
+            >
+              <Trash2 size={15} />
+            </button>
+          )}
         </div>
 
         <div className="px-6 pb-20 space-y-0.5">
@@ -128,8 +130,8 @@ export default function PlaylistView({ playlistId, setActiveView, refreshPlaylis
                 track={track}
                 index={idx}
                 onPlay={() => handlePlayTrack(track, idx)}
-                isInPlaylist
-                onRemove={handleRemoveTrack}
+                isInPlaylist={!playlist.isBuiltIn}
+                onRemove={!playlist.isBuiltIn ? handleRemoveTrack : undefined}
               />
             ))
           )}

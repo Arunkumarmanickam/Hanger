@@ -3830,5 +3830,290 @@
         }
       ]
     }
+  ],
+  "playlists": [
+    {
+      "id": "mixed",
+      "name": "Mixed",
+      "description": "5 most famous songs from each director",
+      "isBuiltIn": true,
+      "tracks": [
+        {
+          "id": "Roja Solladi",
+          "title": "Roja Solladi",
+          "category": "A.R.Rahman",
+          "file": "Roja Solladi"
+        },
+        {
+          "id": "Pachchai Nirame",
+          "title": "Pachchai Nirame",
+          "category": "A.R.Rahman",
+          "file": "Pachchai Nirame"
+        },
+        {
+          "id": "Alaipayuthey Kanna",
+          "title": "Alaipayuthey Kanna",
+          "category": "A.R.Rahman",
+          "file": "Alaipayuthey Kanna"
+        },
+        {
+          "id": "Evano Oruvan Vasikiran",
+          "title": "Evano Oruvan Vasikiran",
+          "category": "A.R.Rahman",
+          "file": "Evano Oruvan Vasikiran"
+        },
+        {
+          "id": "Mayiliragae",
+          "title": "Mayiliragae",
+          "category": "A.R.Rahman",
+          "file": "Mayiliragae"
+        },
+        {
+          "id": "Why This Kolaveri Di_ (The Soup of Love)",
+          "title": "Why This Kolaveri Di_ (The Soup of Love)",
+          "category": "Anirudh Ravichander",
+          "album": "3 (Moonu) - (2012)",
+          "file": "Why This Kolaveri Di_ (The Soup of Love)"
+        },
+        {
+          "id": "Arabic Kuthu - Halamithi Habibo",
+          "title": "Arabic Kuthu - Halamithi Habibo",
+          "category": "Anirudh Ravichander",
+          "album": "Beast - (2022)",
+          "file": "Arabic Kuthu - Halamithi Habibo"
+        },
+        {
+          "id": "Po Nee Po (The Pain of Love)",
+          "title": "Po Nee Po (The Pain of Love)",
+          "category": "Anirudh Ravichander",
+          "album": "3 (Moonu) - (2012)",
+          "file": "Po Nee Po (The Pain of Love)"
+        },
+        {
+          "id": "Enakenna Yaarum Illaye",
+          "title": "Enakenna Yaarum Illaye",
+          "category": "Anirudh Ravichander",
+          "album": "Aakko - (2015)",
+          "file": "Enakenna Yaarum Illaye"
+        },
+        {
+          "id": "Kannazhaga (The Kiss of Love)",
+          "title": "Kannazhaga (The Kiss of Love)",
+          "category": "Anirudh Ravichander",
+          "album": "3 (Moonu) - (2012)",
+          "file": "Kannazhaga (The Kiss of Love)"
+        },
+        {
+          "id": "Oru Vaanam",
+          "title": "Oru Vaanam",
+          "category": "G. V. Prakash Kumar",
+          "file": "Oru Vaanam"
+        },
+        {
+          "id": "Yathe Yathe",
+          "title": "Yathe Yathe",
+          "category": "G. V. Prakash Kumar",
+          "file": "Yathe Yathe"
+        },
+        {
+          "id": "Ayyayo Nenju",
+          "title": "Ayyayo Nenju",
+          "category": "G. V. Prakash Kumar",
+          "file": "Ayyayo Nenju"
+        },
+        {
+          "id": "En Vennilave",
+          "title": "En Vennilave",
+          "category": "G. V. Prakash Kumar",
+          "file": "En Vennilave"
+        },
+        {
+          "id": "Porkkalam (Tamil-Rap)",
+          "title": "Porkkalam (Tamil-Rap)",
+          "category": "G. V. Prakash Kumar",
+          "file": "Porkkalam (Tamil-Rap)"
+        },
+        {
+          "id": "Mudhal Mazhai",
+          "title": "Mudhal Mazhai",
+          "category": "Harris Jayaraj",
+          "file": "Mudhal Mazhai"
+        },
+        {
+          "id": "Yamma Yamma",
+          "title": "Yamma Yamma",
+          "category": "Harris Jayaraj",
+          "file": "Yamma Yamma"
+        },
+        {
+          "id": "Enadhuyirae",
+          "title": "Enadhuyirae",
+          "category": "Harris Jayaraj",
+          "file": "Enadhuyirae"
+        },
+        {
+          "id": "Kannum Kannum Nokia",
+          "title": "Kannum Kannum Nokia",
+          "category": "Harris Jayaraj",
+          "file": "Kannum Kannum Nokia"
+        },
+        {
+          "id": "Hasili Fisiliye",
+          "title": "Hasili Fisiliye",
+          "category": "Harris Jayaraj",
+          "file": "Hasili Fisiliye"
+        },
+        {
+          "id": "Va Va Va Vannila",
+          "title": "Va Va Va Vannila",
+          "category": "Hiphop Tamizha",
+          "file": "Va Va Va Vannila"
+        },
+        {
+          "id": "Kuchi Mittai",
+          "title": "Kuchi Mittai",
+          "category": "Hiphop Tamizha",
+          "file": "Kuchi Mittai"
+        },
+        {
+          "id": "Azhage",
+          "title": "Azhage",
+          "category": "Hiphop Tamizha",
+          "file": "Azhage"
+        },
+        {
+          "id": "Chinna Paiyan",
+          "title": "Chinna Paiyan",
+          "category": "Hiphop Tamizha",
+          "file": "Chinna Paiyan"
+        },
+        {
+          "id": "Aye Aye Aye",
+          "title": "Aye Aye Aye",
+          "category": "Hiphop Tamizha",
+          "file": "Aye Aye Aye"
+        },
+        {
+          "id": "Cholam Vethakkayile",
+          "title": "Cholam Vethakkayile",
+          "category": "Ilaiyaraaja",
+          "file": "Cholam Vethakkayile"
+        },
+        {
+          "id": "Senthoora Poove",
+          "title": "Senthoora Poove",
+          "category": "Ilaiyaraaja",
+          "file": "Senthoora Poove"
+        },
+        {
+          "id": "Oru Raagam",
+          "title": "Oru Raagam",
+          "category": "Ilaiyaraaja",
+          "file": "Oru Raagam"
+        },
+        {
+          "id": "Enna Paada",
+          "title": "Enna Paada",
+          "category": "Ilaiyaraaja",
+          "file": "Enna Paada"
+        },
+        {
+          "id": "Thedi Thedi",
+          "title": "Thedi Thedi",
+          "category": "Ilaiyaraaja",
+          "file": "Thedi Thedi"
+        },
+        {
+          "id": "Aasa Kooda",
+          "title": "Aasa Kooda",
+          "category": "Sai Abhyankkar",
+          "file": "Aasa Kooda"
+        },
+        {
+          "id": "Kannukulla",
+          "title": "Kannukulla",
+          "category": "Sai Abhyankkar",
+          "file": "Kannukulla"
+        },
+        {
+          "id": "Muththe Muththarame",
+          "title": "Muththe Muththarame",
+          "category": "Sai Abhyankkar",
+          "file": "Muththe Muththarame"
+        },
+        {
+          "id": "Oorum Blood",
+          "title": "Oorum Blood",
+          "category": "Sai Abhyankkar",
+          "file": "Oorum Blood"
+        },
+        {
+          "id": "Singari",
+          "title": "Singari",
+          "category": "Sai Abhyankkar",
+          "file": "Singari"
+        },
+        {
+          "id": "A Aa E Ee",
+          "title": "A Aa E Ee",
+          "category": "Vijay Antony",
+          "file": "A Aa E Ee"
+        },
+        {
+          "id": "Karungali Naayae",
+          "title": "Karungali Naayae",
+          "category": "Vijay Antony",
+          "file": "Karungali Naayae"
+        },
+        {
+          "id": "Oodathey Oodathey Nayangal",
+          "title": "Oodathey Oodathey Nayangal",
+          "category": "Vijay Antony",
+          "file": "Oodathey Oodathey Nayangal"
+        },
+        {
+          "id": "Aval Appadi Onrum",
+          "title": "Aval Appadi Onrum",
+          "category": "Vijay Antony",
+          "file": "Aval Appadi Onrum"
+        },
+        {
+          "id": "Natta Nadu Rathiri",
+          "title": "Natta Nadu Rathiri",
+          "category": "Vijay Antony",
+          "file": "Natta Nadu Rathiri"
+        },
+        {
+          "id": "Kanaa Kaanum Kaalangal",
+          "title": "Kanaa Kaanum Kaalangal",
+          "category": "Yuvan Shankar Raja",
+          "file": "Kanaa Kaanum Kaalangal"
+        },
+        {
+          "id": "Kaatriley Nadanthene",
+          "title": "Kaatriley Nadanthene",
+          "category": "Yuvan Shankar Raja",
+          "file": "Kaatriley Nadanthene"
+        },
+        {
+          "id": "Ninaithu Ninaithu Parthal",
+          "title": "Ninaithu Ninaithu Parthal",
+          "category": "Yuvan Shankar Raja",
+          "file": "Ninaithu Ninaithu Parthal"
+        },
+        {
+          "id": "January Madham",
+          "title": "January Madham",
+          "category": "Yuvan Shankar Raja",
+          "file": "January Madham"
+        },
+        {
+          "id": "Oru Thuli Vishamai",
+          "title": "Oru Thuli Vishamai",
+          "category": "Yuvan Shankar Raja",
+          "file": "Oru Thuli Vishamai"
+        }
+      ]
+    }
   ]
 }
