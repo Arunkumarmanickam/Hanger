@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
-import { Play, Disc3, Music, TrendingUp, Library, Headphones } from 'lucide-react'
-import { getCategories, getCategoryTracks } from '../utils/api'
-import { usePlayer } from '../context/PlayerContext'
+import { Disc3, Music, Library } from 'lucide-react'
+import { getCategories } from '../utils/api'
 
 const CARD_GRADIATES = [
   ['from-rose-600 to-pink-500'],
@@ -17,49 +16,31 @@ const CARD_GRADIATES = [
   ['from-rose-600 to-red-500'],
 ]
 
-const gradientRow = 'from-hanger-accent/20 via-hanger-accent2/10 to-hanger-bg'
-
 export default function HomeView({ setActiveView }) {
   const [categories, setCategories] = useState([])
-  const [heroCategory, setHeroCategory] = useState(null)
-  const [heroTracks, setHeroTracks] = useState([])
   const [loading, setLoading] = useState(true)
   const mountedRef = useRef(false)
-  const { playPlaylist } = usePlayer()
 
   useEffect(() => {
     mountedRef.current = true
     return () => { mountedRef.current = false }
   }, [])
 
-  useEffect(() => { loadData() }, [])
-
-  const loadData = async () => {
-    try {
-      const cats = await getCategories()
-      if (!mountedRef.current) return
-
-      const sorted = [...cats].sort((a, b) => {
-        const aCount = parseInt(a.description) || 0
-        const bCount = parseInt(b.description) || 0
-        return bCount - aCount
-      })
-      setCategories(sorted)
-
-      if (sorted.length > 0) {
-        const hero = sorted[0]
-        const data = await getCategoryTracks(hero.id)
-        if (mountedRef.current) {
-          setHeroCategory(hero)
-          setHeroTracks(data.tracks || [])
-        }
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const cats = await getCategories()
+        if (!mountedRef.current) return
+        const sorted = [...cats].sort((a, b) => a.name.localeCompare(b.name))
+        setCategories(sorted)
+      } catch (err) {
+        console.error('Failed to load:', err)
+      } finally {
+        if (mountedRef.current) setLoading(false)
       }
-    } catch (err) {
-      console.error('Failed to load:', err)
-    } finally {
-      if (mountedRef.current) setLoading(false)
     }
-  }
+    loadData()
+  }, [])
 
   const totalSongs = categories.reduce((s, c) => s + (parseInt(c.description) || 0), 0)
 
@@ -77,71 +58,39 @@ export default function HomeView({ setActiveView }) {
   }
 
   return (
-    <div className="h-full overflow-y-auto">
-      {heroCategory && (
-        <section className="relative overflow-hidden">
-          <div className={`absolute inset-0 bg-gradient-to-br ${gradientRow}`} />
-          <div className="absolute inset-0 bg-gradient-to-t from-hanger-bg via-transparent to-transparent" />
-          <div className="relative px-6 pt-8 pb-12">
-            <div className="flex items-center gap-2 text-hanger-accent/70 mb-4">
-              <Headphones size={14} />
-              <span className="text-xs font-semibold uppercase tracking-widest">Most Songs</span>
-            </div>
-            <div className="flex items-end gap-6">
-              <div className="w-36 h-36 rounded-3xl accent-gradient flex items-center justify-center shadow-2xl shadow-hanger-accent/20 flex-shrink-0">
-                <Music size={64} className="text-white/80" />
-              </div>
-              <div className="flex-1 min-w-0 pb-1">
-                <h2 className="text-4xl font-bold text-white tracking-tight">{heroCategory.name}</h2>
-                <p className="text-sm text-hanger-muted/60 mt-1.5">{heroCategory.description}</p>
-                <button
-                  onClick={() => { if (heroTracks.length) playPlaylist(heroTracks, 0) }}
-                  className="mt-4 flex items-center gap-2 px-6 py-2.5 accent-gradient text-white font-semibold rounded-full hover:scale-105 transition-transform shadow-lg shadow-hanger-accent/20"
-                >
-                  <Play size={15} fill="white" />
-                  Play All
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      <section className="px-6 pb-8 -mt-4 relative z-10">
-        <div className="flex items-center gap-4 mb-5">
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-hanger-card/50 border border-hanger-border/20">
-            <Library size={13} className="text-hanger-accent" />
-            <span className="text-xs text-hanger-muted/80">{categories.length} directors</span>
-          </div>
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-hanger-card/50 border border-hanger-border/20">
-            <Disc3 size={13} className="text-hanger-accent2" />
-            <span className="text-xs text-hanger-muted/80">{totalSongs} songs</span>
-          </div>
+    <div className="h-full overflow-y-auto p-6">
+      <div className="flex items-center gap-4 mb-6">
+        <div className="flex items-center gap-2 px-3 py-1.5 rounded-full glass-card">
+          <Library size={13} className="text-white/60" />
+          <span className="text-xs text-white/50">{categories.length} directors</span>
         </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-          {categories.map((cat, idx) => {
-            const [gradient] = CARD_GRADIATES[idx % CARD_GRADIATES.length]
-            return (
-              <button
-                key={cat.id}
-                onClick={() => setActiveView(cat.id)}
-                className="group text-left animate-fade-in"
-                style={{ animationDelay: `${idx * 50}ms` }}
-              >
-                <div className={`relative w-full aspect-square rounded-2xl bg-gradient-to-br ${gradient} flex items-center justify-center shadow-md group-hover:shadow-xl group-hover:scale-[1.04] transition-all duration-300 overflow-hidden`}>
-                  <Music size={40} className="text-white/50 group-hover:text-white/80 group-hover:scale-110 transition-all duration-300" />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-                </div>
-                <div className="mt-2 px-0.5">
-                  <p className="text-sm font-semibold text-hanger-text truncate group-hover:text-white transition-colors">{cat.name}</p>
-                  <p className="text-xs text-hanger-muted/50 mt-0.5">{cat.description}</p>
-                </div>
-              </button>
-            )
-          })}
+        <div className="flex items-center gap-2 px-3 py-1.5 rounded-full glass-card">
+          <Disc3 size={13} className="text-white/40" />
+          <span className="text-xs text-white/50">{totalSongs} songs</span>
         </div>
-      </section>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+        {categories.map((cat, idx) => {
+          const [gradient] = CARD_GRADIATES[idx % CARD_GRADIATES.length]
+          return (
+            <button
+              key={cat.id}
+              onClick={() => setActiveView(cat.id)}
+              className="group text-left animate-fade-in"
+              style={{ animationDelay: `${idx * 50}ms` }}
+            >
+              <div className={`relative w-full aspect-square rounded-2xl bg-gradient-to-br ${gradient} flex items-center justify-center shadow-md group-hover:shadow-xl group-hover:scale-[1.04] transition-all duration-300 overflow-hidden`}>
+                <Music size={40} className="text-white/50 group-hover:text-white/80 group-hover:scale-110 transition-all duration-300" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+              </div>
+              <div className="mt-2 px-0.5">
+                <p className="text-sm font-semibold text-hanger-text truncate group-hover:text-white transition-colors">{cat.name}</p>
+                <p className="text-xs text-hanger-muted/50 mt-0.5">{cat.description}</p>
+              </div>
+            </button>
+          )
+        })}
+      </div>
     </div>
   )
 }
