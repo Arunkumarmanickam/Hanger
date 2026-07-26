@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
-import { Disc3, Music, Library } from 'lucide-react'
-import { getCategories } from '../utils/api'
+import { Disc3, Music, Library, ListMusic } from 'lucide-react'
+import { getCategories, getPlaylists } from '../utils/api'
 
 const CARD_GRADIATES = [
   ['from-rose-600 to-pink-500'],
@@ -29,9 +29,18 @@ export default function HomeView({ setActiveView }) {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const cats = await getCategories()
+        const [cats, playlists] = await Promise.all([getCategories(), getPlaylists()])
         if (!mountedRef.current) return
         const sorted = [...cats].sort((a, b) => a.name.localeCompare(b.name))
+        const mixed = playlists.find(p => p.id === 'mixed')
+        if (mixed) {
+          sorted.push({
+            id: 'playlist-mixed',
+            name: mixed.name,
+            description: `${mixed.tracks.length} songs`,
+            isPlaylist: true
+          })
+        }
         setCategories(sorted)
       } catch (err) {
         console.error('Failed to load:', err)
@@ -72,6 +81,7 @@ export default function HomeView({ setActiveView }) {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
         {categories.map((cat, idx) => {
           const [gradient] = CARD_GRADIATES[idx % CARD_GRADIATES.length]
+          const isMixed = cat.isPlaylist
           return (
             <button
               key={cat.id}
@@ -80,7 +90,11 @@ export default function HomeView({ setActiveView }) {
               style={{ animationDelay: `${idx * 50}ms` }}
             >
               <div className={`relative w-full aspect-square rounded-2xl bg-gradient-to-br ${gradient} flex items-center justify-center shadow-md group-hover:shadow-xl group-hover:scale-[1.04] transition-all duration-300 overflow-hidden`}>
-                <Music size={40} className="text-white/50 group-hover:text-white/80 group-hover:scale-110 transition-all duration-300" />
+                {isMixed ? (
+                  <ListMusic size={40} className="text-white/50 group-hover:text-white/80 group-hover:scale-110 transition-all duration-300" />
+                ) : (
+                  <Music size={40} className="text-white/50 group-hover:text-white/80 group-hover:scale-110 transition-all duration-300" />
+                )}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
               </div>
               <div className="mt-2 px-0.5">
