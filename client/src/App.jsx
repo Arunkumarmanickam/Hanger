@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react'
-import Sidebar from './components/Sidebar'
+import TopBar from './components/TopBar'
 import MainContent from './components/MainContent'
 import PlayerBar from './components/PlayerBar'
 
@@ -15,12 +15,8 @@ export default function App() {
 
   return (
     <div className="h-screen flex flex-col bg-hanger-bg">
-      <div className="flex flex-1 overflow-hidden">
-        <Sidebar
-          activeView={activeView}
-          setActiveView={setActiveView}
-          refreshPlaylists={sidebarRefresh}
-        />
+      <TopBar activeView={activeView} setActiveView={setActiveView} />
+      <div className="flex-1 overflow-hidden relative">
         <MainContent
           activeView={activeView}
           setActiveView={setActiveView}

@@ -6,35 +6,18 @@ import LibraryView from './LibraryView'
 
 export default function MainContent({ activeView, setActiveView, refreshPlaylists }) {
   const renderView = () => {
-    if (activeView === 'home') {
-      return <HomeView setActiveView={setActiveView} />
-    }
-    if (activeView === 'search') {
-      return <SearchView />
-    }
-    if (activeView === 'library') {
-      return <LibraryView setActiveView={setActiveView} />
-    }
+    if (activeView === 'home') return <HomeView setActiveView={setActiveView} />
+    if (activeView === 'search') return <SearchView />
+    if (activeView === 'library') return <LibraryView setActiveView={setActiveView} />
     if (activeView?.startsWith('playlist-')) {
       const playlistId = activeView.replace('playlist-', '')
-      return (
-        <PlaylistView
-          playlistId={playlistId}
-          setActiveView={setActiveView}
-          refreshPlaylists={refreshPlaylists}
-        />
-      )
+      return <PlaylistView playlistId={playlistId} setActiveView={setActiveView} refreshPlaylists={refreshPlaylists} />
     }
-    return (
-      <ArtistView
-        categoryId={activeView}
-        setActiveView={setActiveView}
-      />
-    )
+    return <ArtistView categoryId={activeView} setActiveView={setActiveView} />
   }
 
   return (
-    <main className="flex-1 overflow-hidden bg-hanger-bg">
+    <main className="h-full bg-hanger-bg">
       {renderView()}
     </main>
   )

@@ -1,25 +1,29 @@
 import { useState, useEffect, useRef } from 'react'
-import { Disc3, Music } from 'lucide-react'
-import { getCategories } from '../utils/api'
+import { Play, Disc3, Music, TrendingUp } from 'lucide-react'
+import { getCategories, getCategoryTracks } from '../utils/api'
+import { usePlayer } from '../context/PlayerContext'
 
 const CARD_GRADIATES = [
-  ['from-rose-600 to-pink-500', 'via-pink-400/20'],
-  ['from-violet-600 to-purple-500', 'via-purple-400/20'],
-  ['from-blue-600 to-cyan-500', 'via-blue-400/20'],
-  ['from-amber-600 to-orange-500', 'via-orange-400/20'],
-  ['from-emerald-600 to-teal-500', 'via-teal-400/20'],
-  ['from-fuchsia-600 to-pink-500', 'via-fuchsia-400/20'],
-  ['from-indigo-600 to-blue-500', 'via-indigo-400/20'],
-  ['from-rose-600 to-red-500', 'via-red-400/20'],
-  ['from-teal-600 to-emerald-500', 'via-emerald-400/20'],
-  ['from-orange-600 to-amber-500', 'via-amber-400/20'],
-  ['from-purple-600 to-fuchsia-500', 'via-fuchsia-400/20'],
+  ['from-rose-600 to-pink-500'],
+  ['from-violet-600 to-purple-500'],
+  ['from-blue-600 to-cyan-500'],
+  ['from-amber-600 to-orange-500'],
+  ['from-emerald-600 to-teal-500'],
+  ['from-fuchsia-600 to-pink-500'],
+  ['from-indigo-600 to-blue-500'],
+  ['from-orange-600 to-amber-500'],
+  ['from-teal-600 to-emerald-500'],
+  ['from-purple-600 to-fuchsia-500'],
+  ['from-rose-600 to-red-500'],
 ]
 
 export default function HomeView({ setActiveView }) {
   const [categories, setCategories] = useState([])
+  const [heroCategory, setHeroCategory] = useState(null)
+  const [heroTracks, setHeroTracks] = useState([])
   const [loading, setLoading] = useState(true)
   const mountedRef = useRef(false)
+  const { playPlaylist } = usePlayer()
 
   useEffect(() => {
     mountedRef.current = true
@@ -27,16 +31,25 @@ export default function HomeView({ setActiveView }) {
   }, [])
 
   useEffect(() => {
-    loadCategories()
+    loadData()
   }, [])
 
-  const loadCategories = async () => {
+  const loadData = async () => {
     try {
       const cats = await getCategories()
       if (!mountedRef.current) return
       setCategories(cats)
+
+      if (cats.length > 0) {
+        const hero = cats[0]
+        const data = await getCategoryTracks(hero.id)
+        if (mountedRef.current) {
+          setHeroCategory(hero)
+          setHeroTracks(data.tracks || [])
+        }
+      }
     } catch (err) {
-      console.error('Failed to load categories:', err)
+      console.error('Failed to load:', err)
     } finally {
       if (mountedRef.current) setLoading(false)
     }
@@ -49,7 +62,7 @@ export default function HomeView({ setActiveView }) {
           <div className="w-12 h-12 rounded-2xl accent-gradient flex items-center justify-center animate-pulse">
             <Disc3 size={24} className="text-white animate-spin-slow" />
           </div>
-          <p className="text-hanger-muted text-sm">Loading your music...</p>
+          <p className="text-hanger-muted text-sm">Loading...</p>
         </div>
       </div>
     )
@@ -57,42 +70,63 @@ export default function HomeView({ setActiveView }) {
 
   return (
     <div className="h-full overflow-y-auto">
-      <div className="p-6 pb-4">
-        <h1 className="text-3xl font-bold text-hanger-text tracking-tight">
-          Hanger
-        </h1>
-        <p className="text-sm text-hanger-muted/70 mt-1">
-          Your curated music collection
-        </p>
-      </div>
+      {heroCategory && (
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-hanger-accent/20 via-hanger-accent2/10 to-hanger-bg" />
+          <div className="absolute inset-0 bg-gradient-to-t from-hanger-bg via-transparent to-transparent" />
+          <div className="relative px-6 pt-8 pb-12">
+            <div className="flex items-center gap-2 text-hanger-accent/70 mb-4">
+              <TrendingUp size={14} />
+              <span className="text-xs font-semibold uppercase tracking-widest">Featured</span>
+            </div>
+            <div className="flex items-end gap-6">
+              <div className="w-36 h-36 rounded-3xl accent-gradient flex items-center justify-center shadow-2xl shadow-hanger-accent/20 flex-shrink-0">
+                <Music size={64} className="text-white/80" />
+              </div>
+              <div className="flex-1 min-w-0 pb-1">
+                <h2 className="text-4xl font-bold text-white tracking-tight">{heroCategory.name}</h2>
+                <p className="text-sm text-hanger-muted/60 mt-1.5">{heroCategory.description}</p>
+                <button
+                  onClick={() => { if (heroTracks.length) playPlaylist(heroTracks, 0) }}
+                  className="mt-4 flex items-center gap-2 px-6 py-2.5 accent-gradient text-white font-semibold rounded-full hover:scale-105 transition-transform shadow-lg shadow-hanger-accent/20"
+                >
+                  <Play size={15} fill="white" />
+                  Play All
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
-      <div className="px-6 pb-8">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5">
+      <section className="px-6 pb-8 -mt-4 relative z-10">
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-sm font-semibold text-hanger-text/80 tracking-wide">Directors</h3>
+          <span className="text-xs text-hanger-muted/40">{categories.length} total</span>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
           {categories.map((cat, idx) => {
-            const [gradient, overlay] = CARD_GRADIATES[idx % CARD_GRADIATES.length]
+            const [gradient] = CARD_GRADIATES[idx % CARD_GRADIATES.length]
             return (
               <button
                 key={cat.id}
                 onClick={() => setActiveView(cat.id)}
                 className="group text-left animate-fade-in"
-                style={{ animationDelay: `${idx * 60}ms` }}
+                style={{ animationDelay: `${idx * 50}ms` }}
               >
-                <div className={`relative w-full aspect-square rounded-2xl bg-gradient-to-br ${gradient} flex items-center justify-center shadow-lg group-hover:shadow-2xl group-hover:scale-[1.03] transition-all duration-400 overflow-hidden`}>
-                  <div className={`absolute inset-0 bg-gradient-to-t from-black/40 ${overlay} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-                  <Music size={48} className="text-white/60 group-hover:text-white/90 group-hover:scale-110 transition-all duration-300" />
+                <div className={`relative w-full aspect-square rounded-2xl bg-gradient-to-br ${gradient} flex items-center justify-center shadow-md group-hover:shadow-xl group-hover:scale-[1.04] transition-all duration-300 overflow-hidden`}>
+                  <Music size={40} className="text-white/50 group-hover:text-white/80 group-hover:scale-110 transition-all duration-300" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
                 </div>
-                <div className="mt-2.5 px-0.5">
-                  <p className="text-sm font-semibold text-hanger-text truncate group-hover:text-white transition-colors">
-                    {cat.name}
-                  </p>
-                  <p className="text-xs text-hanger-muted/60 mt-0.5">{cat.description}</p>
+                <div className="mt-2 px-0.5">
+                  <p className="text-sm font-semibold text-hanger-text truncate group-hover:text-white transition-colors">{cat.name}</p>
+                  <p className="text-xs text-hanger-muted/50 mt-0.5">{cat.description}</p>
                 </div>
               </button>
             )
           })}
         </div>
-      </div>
+      </section>
     </div>
   )
 }
