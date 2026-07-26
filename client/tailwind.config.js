@@ -9,15 +9,14 @@ export default {
       colors: {
         hanger: {
           bg: '#08080b',
-          surface: '#0d0d14',
-          card: '#14141e',
-          hover: '#1e1e30',
-          accent: '#ec4899',
-          accent2: '#8b5cf6',
-          accent3: '#3b82f6',
-          text: '#f0f0f5',
-          muted: '#8a8aa5',
-          border: '#2a2a3a',
+          surface: '#0a0a12',
+          card: 'rgba(10,10,18,0.4)',
+          hover: 'rgba(255,255,255,0.06)',
+          accent: '#ffffff',
+          accent2: 'rgba(255,255,255,0.6)',
+          text: '#ffffff',
+          muted: 'rgba(255,255,255,0.45)',
+          border: 'rgba(255,255,255,0.08)',
         },
       },
       animation: {

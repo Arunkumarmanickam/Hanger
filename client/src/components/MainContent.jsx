@@ -19,7 +19,7 @@ export default function MainContent({ activeView, setActiveView, refreshPlaylist
   }
 
   return (
-    <main className="h-full bg-hanger-bg">
+    <main className="h-full">
       {renderView()}
     </main>
   )
