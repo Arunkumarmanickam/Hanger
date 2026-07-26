@@ -1,7 +1,8 @@
-import { useState, useCallback } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import TopBar from './components/TopBar'
 import MainContent from './components/MainContent'
 import PlayerPanel from './components/PlayerPanel'
+import FakeLanding from './components/FakeLanding'
 import { usePlayer } from './context/PlayerContext'
 import { getThumbnailUrl } from './utils/api'
 
@@ -28,11 +29,27 @@ export default function App() {
   const [activeView, setActiveView] = useState('home')
   const [refreshPlaylists, setRefreshPlaylists] = useState(0)
   const [sidebarRefresh, setSidebarRefresh] = useState(0)
+  const [showMusic, setShowMusic] = useState(false)
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'H') {
+        e.preventDefault()
+        setShowMusic(prev => !prev)
+      }
+    }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [])
 
   const handleRefreshPlaylists = useCallback(() => {
     setRefreshPlaylists(prev => prev + 1)
     setSidebarRefresh(prev => prev + 1)
   }, [])
+
+  if (!showMusic) {
+    return <FakeLanding />
+  }
 
   return (
     <div className="h-screen flex flex-col bg-[#08080b] relative">
