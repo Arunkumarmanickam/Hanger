@@ -1,74 +1,125 @@
-const API_BASE = '/api';
+const GITHUB_USER = 'Arunkumarmanickam'
+const GITHUB_REPO = 'Hanger-Music'
+const BASE_AUDIO_URL = `https://cdn.jsdelivr.net/gh/${GITHUB_USER}/${GITHUB_REPO}@main/assets`
 
-async function fetchJSON(url, options = {}) {
-  const res = await fetch(`${API_BASE}${url}`, {
-    headers: { 'Content-Type': 'application/json' },
-    ...options,
-  });
-  if (!res.ok) throw new Error(`API error: ${res.status}`);
-  return res.json();
+let catalog = null
+let catalogPromise = null
+
+const STORAGE_KEY = 'hanger_playlists'
+
+function getStoredPlaylists() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+  } catch { return [] }
+}
+
+function savePlaylists(playlists) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(playlists))
+}
+
+async function loadCatalog() {
+  if (catalog) return catalog
+  if (catalogPromise) return catalogPromise
+  catalogPromise = (async () => {
+    try {
+      const res = await fetch('catalog.json')
+      if (!res.ok) throw new Error('Failed to load catalog')
+      catalog = await res.json()
+      return catalog
+    } catch (err) {
+      console.error('Failed to load catalog:', err)
+      catalog = { categories: [] }
+      return catalog
+    }
+  })()
+  return catalogPromise
 }
 
 export async function getCategories() {
-  const data = await fetchJSON('/assets/categories');
-  return data.categories || [];
+  const data = await loadCatalog()
+  return data.categories.map(({ id, name, description }) => ({ id, name, description }))
 }
 
 export async function getCategoryTracks(categoryId) {
-  const data = await fetchJSON(`/assets/categories/${categoryId}`);
-  return { category: data.category, tracks: data.tracks || [] };
+  const data = await loadCatalog()
+  const cat = data.categories.find(c => c.id === categoryId)
+  if (!cat) return { category: null, tracks: [] }
+  return { category: { name: cat.name, description: cat.description }, tracks: cat.tracks || [] }
 }
 
 export async function getCategoryTracksPreview(categoryId) {
-  return getCategoryTracks(categoryId);
+  return getCategoryTracks(categoryId)
 }
 
 export function getAudioUrl(track) {
-  return `/assets/${track.category || 'unknown'}/${track.file || track.id}.mp3`;
+  const parts = [track.category]
+  if (track.album) parts.push(track.album)
+  parts.push(track.file + '.mp3')
+  const path = parts.map(s => encodeURIComponent(s)).join('/')
+  return `${BASE_AUDIO_URL}/${path}`
 }
 
 export async function searchTracks(query) {
-  const data = await fetchJSON(`/search?q=${encodeURIComponent(query)}`);
-  return data.tracks || [];
+  if (!query.trim()) return []
+  const q = query.toLowerCase()
+  const data = await loadCatalog()
+  const results = []
+  for (const cat of data.categories) {
+    for (const track of cat.tracks || []) {
+      if (track.title.toLowerCase().includes(q) || track.category.toLowerCase().includes(q)) {
+        results.push(track)
+      }
+    }
+  }
+  return results
 }
 
 export function getThumbnailUrl(track) {
-  return `https://img.youtube.com/vi/${track.id}/hqdefault.jpg`;
+  return `https://img.youtube.com/vi/${track.id}/hqdefault.jpg`
 }
 
 export async function getPlaylists() {
-  const data = await fetchJSON('/playlists');
-  return data.playlists || [];
+  return getStoredPlaylists()
 }
 
 export async function createPlaylist(name, description) {
-  const data = await fetchJSON('/playlists', {
-    method: 'POST',
-    body: JSON.stringify({ name, description }),
-  });
-  return data.playlist;
+  const playlists = getStoredPlaylists()
+  const playlist = {
+    id: Date.now().toString(),
+    name,
+    description: description || '',
+    tracks: [],
+    createdAt: new Date().toISOString()
+  }
+  playlists.push(playlist)
+  savePlaylists(playlists)
+  return playlist
 }
 
 export async function getPlaylist(id) {
-  const data = await fetchJSON(`/playlists/${id}`);
-  return data.playlist;
+  const playlists = getStoredPlaylists()
+  return playlists.find(p => p.id === id) || null
 }
 
 export async function addTrackToPlaylist(playlistId, track) {
-  const data = await fetchJSON(`/playlists/${playlistId}/tracks`, {
-    method: 'POST',
-    body: JSON.stringify({ track }),
-  });
-  return data.playlist;
+  const playlists = getStoredPlaylists()
+  const playlist = playlists.find(p => p.id === playlistId)
+  if (!playlist) return null
+  playlist.tracks.push(track)
+  savePlaylists(playlists)
+  return playlist
 }
 
 export async function removeTrackFromPlaylist(playlistId, trackId) {
-  const data = await fetchJSON(`/playlists/${playlistId}/tracks/${trackId}`, {
-    method: 'DELETE',
-  });
-  return data.playlist;
+  const playlists = getStoredPlaylists()
+  const playlist = playlists.find(p => p.id === playlistId)
+  if (!playlist) return null
+  playlist.tracks = playlist.tracks.filter(t => t.id !== trackId)
+  savePlaylists(playlists)
+  return playlist
 }
 
 export async function deletePlaylist(id) {
-  await fetchJSON(`/playlists/${id}`, { method: 'DELETE' });
+  const playlists = getStoredPlaylists()
+  savePlaylists(playlists.filter(p => p.id !== id))
 }

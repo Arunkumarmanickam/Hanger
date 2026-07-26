@@ -1,7 +1,8 @@
 node_modules/
-assets/
 server/data/
-*.mp3
+client/dist/
 *.m4a
 *.wav
 *.flac
+cloudflared.exe
+ngrok.exe

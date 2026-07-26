@@ -200,7 +200,17 @@ function countMp3Files(dirPath) {
   return count
 }
 
-const PORT = 3001
+// Serve built frontend
+const CLIENT_DIST = path.resolve(__dirname, '..', 'client', 'dist')
+app.use(express.static(CLIENT_DIST))
+
+// SPA fallback: serve index.html for any non-API, non-asset route
+app.get('*', (req, res) => {
+  if (req.path.startsWith('/api/') || req.path.startsWith('/assets/')) return
+  res.sendFile(path.join(CLIENT_DIST, 'index.html'))
+})
+
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`Hanger server running on http://localhost:${PORT}`)
   console.log(`Serving assets from: ${ASSETS_DIR}`)
