@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
-import { ListMusic, Heart, Library, Disc3 } from 'lucide-react'
+import { ListMusic, Heart, Library, Disc3, Plus } from 'lucide-react'
 import { getPlaylists } from '../utils/api'
 import { usePlayer } from '../context/PlayerContext'
+import CreatePlaylistModal from './CreatePlaylistModal'
 
 export default function LibraryView({ setActiveView }) {
   const [playlists, setPlaylists] = useState([])
   const [loading, setLoading] = useState(true)
+  const [showCreateModal, setShowCreateModal] = useState(false)
   const { likedTracks } = usePlayer()
 
   useEffect(() => {
@@ -43,7 +45,7 @@ export default function LibraryView({ setActiveView }) {
       <div className="mb-8">
         <div
           className="flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-red-500/10 to-pink-500/5 border border-red-500/10 hover:border-red-500/20 transition-all cursor-pointer group"
-          onClick={() => {}}
+          onClick={() => setActiveView('liked')}
         >
           <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
             <Heart size={24} className="text-white" fill="white" />
@@ -55,9 +57,18 @@ export default function LibraryView({ setActiveView }) {
         </div>
       </div>
 
-      <h2 className="text-xs font-semibold text-hanger-muted/50 uppercase tracking-widest mb-3">
-        Your Playlists
-      </h2>
+      <div className="flex items-center justify-between mb-3">
+        <h2 className="text-xs font-semibold text-hanger-muted/50 uppercase tracking-widest">
+          Your Playlists
+        </h2>
+        <button
+          onClick={() => setShowCreateModal(true)}
+          className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-hanger-accent hover:text-white border border-hanger-accent/30 hover:bg-hanger-accent/20 rounded-xl transition-all"
+        >
+          <Plus size={12} />
+          New
+        </button>
+      </div>
 
       {loading ? (
         <div className="flex items-center justify-center py-12">
@@ -90,6 +101,16 @@ export default function LibraryView({ setActiveView }) {
             </div>
           ))}
         </div>
+      )}
+
+      {showCreateModal && (
+        <CreatePlaylistModal
+          onClose={() => setShowCreateModal(false)}
+          onCreated={() => {
+            setShowCreateModal(false)
+            loadPlaylists()
+          }}
+        />
       )}
     </div>
   )

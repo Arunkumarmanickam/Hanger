@@ -24,7 +24,7 @@ export default function TopBar({ activeView, setActiveView }) {
 
       <nav className="flex items-center gap-1 bg-hanger-card/40 rounded-2xl p-1 border border-hanger-border/20">
         {tabs.map(({ id, label, icon: Icon }) => {
-          const isActive = activeView === id || (id === 'home' && !['home', 'search', 'library'].includes(activeView))
+          const isActive = activeView === id || (id === 'home' && !['home', 'search', 'library', 'liked'].includes(activeView)) || (id === 'library' && activeView === 'liked')
           return (
             <button
               key={id}

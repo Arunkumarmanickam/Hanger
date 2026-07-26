@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { Play, Disc3, Music, TrendingUp } from 'lucide-react'
+import { Play, Disc3, Music, TrendingUp, Library, Headphones } from 'lucide-react'
 import { getCategories, getCategoryTracks } from '../utils/api'
 import { usePlayer } from '../context/PlayerContext'
 
@@ -17,6 +17,8 @@ const CARD_GRADIATES = [
   ['from-rose-600 to-red-500'],
 ]
 
+const gradientRow = 'from-hanger-accent/20 via-hanger-accent2/10 to-hanger-bg'
+
 export default function HomeView({ setActiveView }) {
   const [categories, setCategories] = useState([])
   const [heroCategory, setHeroCategory] = useState(null)
@@ -30,18 +32,22 @@ export default function HomeView({ setActiveView }) {
     return () => { mountedRef.current = false }
   }, [])
 
-  useEffect(() => {
-    loadData()
-  }, [])
+  useEffect(() => { loadData() }, [])
 
   const loadData = async () => {
     try {
       const cats = await getCategories()
       if (!mountedRef.current) return
-      setCategories(cats)
 
-      if (cats.length > 0) {
-        const hero = cats[0]
+      const sorted = [...cats].sort((a, b) => {
+        const aCount = parseInt(a.description) || 0
+        const bCount = parseInt(b.description) || 0
+        return bCount - aCount
+      })
+      setCategories(sorted)
+
+      if (sorted.length > 0) {
+        const hero = sorted[0]
         const data = await getCategoryTracks(hero.id)
         if (mountedRef.current) {
           setHeroCategory(hero)
@@ -54,6 +60,8 @@ export default function HomeView({ setActiveView }) {
       if (mountedRef.current) setLoading(false)
     }
   }
+
+  const totalSongs = categories.reduce((s, c) => s + (parseInt(c.description) || 0), 0)
 
   if (loading) {
     return (
@@ -72,12 +80,12 @@ export default function HomeView({ setActiveView }) {
     <div className="h-full overflow-y-auto">
       {heroCategory && (
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-hanger-accent/20 via-hanger-accent2/10 to-hanger-bg" />
+          <div className={`absolute inset-0 bg-gradient-to-br ${gradientRow}`} />
           <div className="absolute inset-0 bg-gradient-to-t from-hanger-bg via-transparent to-transparent" />
           <div className="relative px-6 pt-8 pb-12">
             <div className="flex items-center gap-2 text-hanger-accent/70 mb-4">
-              <TrendingUp size={14} />
-              <span className="text-xs font-semibold uppercase tracking-widest">Featured</span>
+              <Headphones size={14} />
+              <span className="text-xs font-semibold uppercase tracking-widest">Most Songs</span>
             </div>
             <div className="flex items-end gap-6">
               <div className="w-36 h-36 rounded-3xl accent-gradient flex items-center justify-center shadow-2xl shadow-hanger-accent/20 flex-shrink-0">
@@ -100,10 +108,17 @@ export default function HomeView({ setActiveView }) {
       )}
 
       <section className="px-6 pb-8 -mt-4 relative z-10">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-sm font-semibold text-hanger-text/80 tracking-wide">Directors</h3>
-          <span className="text-xs text-hanger-muted/40">{categories.length} total</span>
+        <div className="flex items-center gap-4 mb-5">
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-hanger-card/50 border border-hanger-border/20">
+            <Library size={13} className="text-hanger-accent" />
+            <span className="text-xs text-hanger-muted/80">{categories.length} directors</span>
+          </div>
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-hanger-card/50 border border-hanger-border/20">
+            <Disc3 size={13} className="text-hanger-accent2" />
+            <span className="text-xs text-hanger-muted/80">{totalSongs} songs</span>
+          </div>
         </div>
+
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
           {categories.map((cat, idx) => {
             const [gradient] = CARD_GRADIATES[idx % CARD_GRADIATES.length]

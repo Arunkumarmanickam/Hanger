@@ -17,7 +17,7 @@ function savePlaylists(playlists) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(playlists))
 }
 
-async function loadCatalog() {
+export async function loadCatalog() {
   if (catalog) return catalog
   if (catalogPromise) return catalogPromise
   catalogPromise = (async () => {

@@ -1,6 +1,403 @@
 {
   "categories": [
     {
+      "id": "A.R.Rahman",
+      "name": "A.R.Rahman",
+      "description": "65 songs",
+      "tracks": [
+        {
+          "id": "Aagaaya Neelangalil",
+          "title": "Aagaaya Neelangalil",
+          "category": "A.R.Rahman",
+          "file": "Aagaaya Neelangalil"
+        },
+        {
+          "id": "Aararai Kodi (Anbe Aaruyire)",
+          "title": "Aararai Kodi (Anbe Aaruyire)",
+          "category": "A.R.Rahman",
+          "file": "Aararai Kodi (Anbe Aaruyire)"
+        },
+        {
+          "id": "Aararo",
+          "title": "Aararo",
+          "category": "A.R.Rahman",
+          "file": "Aararo"
+        },
+        {
+          "id": "Alaipayuthey Kanna",
+          "title": "Alaipayuthey Kanna",
+          "category": "A.R.Rahman",
+          "file": "Alaipayuthey Kanna"
+        },
+        {
+          "id": "Ambikapathy",
+          "title": "Ambikapathy",
+          "category": "A.R.Rahman",
+          "file": "Ambikapathy"
+        },
+        {
+          "id": "Avalum Naanum",
+          "title": "Avalum Naanum",
+          "category": "A.R.Rahman",
+          "file": "Avalum Naanum"
+        },
+        {
+          "id": "Dol Dol",
+          "title": "Dol Dol",
+          "category": "A.R.Rahman",
+          "file": "Dol Dol"
+        },
+        {
+          "id": "Endhira Logathu Sundhariye",
+          "title": "Endhira Logathu Sundhariye",
+          "category": "A.R.Rahman",
+          "file": "Endhira Logathu Sundhariye"
+        },
+        {
+          "id": "Endrendrum Punnagai",
+          "title": "Endrendrum Punnagai",
+          "category": "A.R.Rahman",
+          "file": "Endrendrum Punnagai"
+        },
+        {
+          "id": "Enthan Nenjil",
+          "title": "Enthan Nenjil",
+          "category": "A.R.Rahman",
+          "file": "Enthan Nenjil"
+        },
+        {
+          "id": "Evano Oruvan Vasikiran",
+          "title": "Evano Oruvan Vasikiran",
+          "category": "A.R.Rahman",
+          "file": "Evano Oruvan Vasikiran"
+        },
+        {
+          "id": "Hey Goodbye Nanba",
+          "title": "Hey Goodbye Nanba",
+          "category": "A.R.Rahman",
+          "file": "Hey Goodbye Nanba"
+        },
+        {
+          "id": "Idhu Naal",
+          "title": "Idhu Naal",
+          "category": "A.R.Rahman",
+          "file": "Idhu Naal"
+        },
+        {
+          "id": "Jana Gana Mana",
+          "title": "Jana Gana Mana",
+          "category": "A.R.Rahman",
+          "file": "Jana Gana Mana"
+        },
+        {
+          "id": "Jwalamukhi (Reprise)",
+          "title": "Jwalamukhi (Reprise)",
+          "category": "A.R.Rahman",
+          "file": "Jwalamukhi (Reprise)"
+        },
+        {
+          "id": "Jwalamukhi",
+          "title": "Jwalamukhi",
+          "category": "A.R.Rahman",
+          "file": "Jwalamukhi"
+        },
+        {
+          "id": "Kaalam Yen Kadhali",
+          "title": "Kaalam Yen Kadhali",
+          "category": "A.R.Rahman",
+          "file": "Kaalam Yen Kadhali"
+        },
+        {
+          "id": "Kadhal Sadugudu",
+          "title": "Kadhal Sadugudu",
+          "category": "A.R.Rahman",
+          "file": "Kadhal Sadugudu"
+        },
+        {
+          "id": "Kalaarasiga",
+          "title": "Kalaarasiga",
+          "category": "A.R.Rahman",
+          "file": "Kalaarasiga"
+        },
+        {
+          "id": "Kanaave Kanaave",
+          "title": "Kanaave Kanaave",
+          "category": "A.R.Rahman",
+          "file": "Kanaave Kanaave"
+        },
+        {
+          "id": "Mangalyam Tantunanena",
+          "title": "Mangalyam Tantunanena",
+          "category": "A.R.Rahman",
+          "file": "Mangalyam Tantunanena"
+        },
+        {
+          "id": "Maram Kothiye",
+          "title": "Maram Kothiye",
+          "category": "A.R.Rahman",
+          "file": "Maram Kothiye"
+        },
+        {
+          "id": "Mayiliragae",
+          "title": "Mayiliragae",
+          "category": "A.R.Rahman",
+          "file": "Mayiliragae"
+        },
+        {
+          "id": "Mei Nigara",
+          "title": "Mei Nigara",
+          "category": "A.R.Rahman",
+          "file": "Mei Nigara"
+        },
+        {
+          "id": "My Twin Brother",
+          "title": "My Twin Brother",
+          "category": "A.R.Rahman",
+          "file": "My Twin Brother"
+        },
+        {
+          "id": "Naalai Naalai",
+          "title": "Naalai Naalai",
+          "category": "A.R.Rahman",
+          "file": "Naalai Naalai"
+        },
+        {
+          "id": "Naan Un",
+          "title": "Naan Un",
+          "category": "A.R.Rahman",
+          "file": "Naan Un"
+        },
+        {
+          "id": "Nee Illa Naanum",
+          "title": "Nee Illa Naanum",
+          "category": "A.R.Rahman",
+          "file": "Nee Illa Naanum"
+        },
+        {
+          "id": "Nenjam Ellam Kadhal",
+          "title": "Nenjam Ellam Kadhal",
+          "category": "A.R.Rahman",
+          "file": "Nenjam Ellam Kadhal"
+        },
+        {
+          "id": "Oliyaaga Vandhaai",
+          "title": "Oliyaaga Vandhaai",
+          "category": "A.R.Rahman",
+          "file": "Oliyaaga Vandhaai"
+        },
+        {
+          "id": "One Two",
+          "title": "One Two",
+          "category": "A.R.Rahman",
+          "file": "One Two"
+        },
+        {
+          "id": "Onne Onne Urukkurane",
+          "title": "Onne Onne Urukkurane",
+          "category": "A.R.Rahman",
+          "file": "Onne Onne Urukkurane"
+        },
+        {
+          "id": "Oor Aayiram Vaanavil",
+          "title": "Oor Aayiram Vaanavil",
+          "category": "A.R.Rahman",
+          "file": "Oor Aayiram Vaanavil"
+        },
+        {
+          "id": "Osaka Muraiya",
+          "title": "Osaka Muraiya",
+          "category": "A.R.Rahman",
+          "file": "Osaka Muraiya"
+        },
+        {
+          "id": "Paarkaadhey Oru Madhiri",
+          "title": "Paarkaadhey Oru Madhiri",
+          "category": "A.R.Rahman",
+          "file": "Paarkaadhey Oru Madhiri"
+        },
+        {
+          "id": "Pachchai Nirame",
+          "title": "Pachchai Nirame",
+          "category": "A.R.Rahman",
+          "file": "Pachchai Nirame"
+        },
+        {
+          "id": "Parakka Seivaai",
+          "title": "Parakka Seivaai",
+          "category": "A.R.Rahman",
+          "file": "Parakka Seivaai"
+        },
+        {
+          "id": "Poyisonna Posikiduven",
+          "title": "Poyisonna Posikiduven",
+          "category": "A.R.Rahman",
+          "file": "Poyisonna Posikiduven"
+        },
+        {
+          "id": "Pullinangal",
+          "title": "Pullinangal",
+          "category": "A.R.Rahman",
+          "file": "Pullinangal"
+        },
+        {
+          "id": "Punnagai Maayai",
+          "title": "Punnagai Maayai",
+          "category": "A.R.Rahman",
+          "file": "Punnagai Maayai"
+        },
+        {
+          "id": "Punnagaiye",
+          "title": "Punnagaiye",
+          "category": "A.R.Rahman",
+          "file": "Punnagaiye"
+        },
+        {
+          "id": "Raajali Nee Gaali",
+          "title": "Raajali Nee Gaali",
+          "category": "A.R.Rahman",
+          "file": "Raajali Nee Gaali"
+        },
+        {
+          "id": "Rasaali",
+          "title": "Rasaali",
+          "category": "A.R.Rahman",
+          "file": "Rasaali"
+        },
+        {
+          "id": "Roja Solladi",
+          "title": "Roja Solladi",
+          "category": "A.R.Rahman",
+          "file": "Roja Solladi"
+        },
+        {
+          "id": "Sai Shirdi Sai",
+          "title": "Sai Shirdi Sai",
+          "category": "A.R.Rahman",
+          "file": "Sai Shirdi Sai"
+        },
+        {
+          "id": "Sanda Kozhi",
+          "title": "Sanda Kozhi",
+          "category": "A.R.Rahman",
+          "file": "Sanda Kozhi"
+        },
+        {
+          "id": "Seemanthapoo",
+          "title": "Seemanthapoo",
+          "category": "A.R.Rahman",
+          "file": "Seemanthapoo"
+        },
+        {
+          "id": "September Madham",
+          "title": "September Madham",
+          "category": "A.R.Rahman",
+          "file": "September Madham"
+        },
+        {
+          "id": "Showkali",
+          "title": "Showkali",
+          "category": "A.R.Rahman",
+          "file": "Showkali"
+        },
+        {
+          "id": "Snehidhane",
+          "title": "Snehidhane",
+          "category": "A.R.Rahman",
+          "file": "Snehidhane"
+        },
+        {
+          "id": "Sofia",
+          "title": "Sofia",
+          "category": "A.R.Rahman",
+          "file": "Sofia"
+        },
+        {
+          "id": "Sollayo Solaikili",
+          "title": "Sollayo Solaikili",
+          "category": "A.R.Rahman",
+          "file": "Sollayo Solaikili"
+        },
+        {
+          "id": "Solvadhai Seidhu Mudippom",
+          "title": "Solvadhai Seidhu Mudippom",
+          "category": "A.R.Rahman",
+          "file": "Solvadhai Seidhu Mudippom"
+        },
+        {
+          "id": "Thalli Pogathey",
+          "title": "Thalli Pogathey",
+          "category": "A.R.Rahman",
+          "file": "Thalli Pogathey"
+        },
+        {
+          "id": "Thazhuvudu Nazhuvudu",
+          "title": "Thazhuvudu Nazhuvudu",
+          "category": "A.R.Rahman",
+          "file": "Thazhuvudu Nazhuvudu"
+        },
+        {
+          "id": "The Land Of Shiva",
+          "title": "The Land Of Shiva",
+          "category": "A.R.Rahman",
+          "file": "The Land Of Shiva"
+        },
+        {
+          "id": "The Oracle",
+          "title": "The Oracle",
+          "category": "A.R.Rahman",
+          "file": "The Oracle"
+        },
+        {
+          "id": "The Voice Without Words",
+          "title": "The Voice Without Words",
+          "category": "A.R.Rahman",
+          "file": "The Voice Without Words"
+        },
+        {
+          "id": "Theme Music",
+          "title": "Theme Music",
+          "category": "A.R.Rahman",
+          "file": "Theme Music"
+        },
+        {
+          "id": "Thigu Thigu",
+          "title": "Thigu Thigu",
+          "category": "A.R.Rahman",
+          "file": "Thigu Thigu"
+        },
+        {
+          "id": "Unnaal Unnaal",
+          "title": "Unnaal Unnaal",
+          "category": "A.R.Rahman",
+          "file": "Unnaal Unnaal"
+        },
+        {
+          "id": "Vaa Vengaiye",
+          "title": "Vaa Vengaiye",
+          "category": "A.R.Rahman",
+          "file": "Vaa Vengaiye"
+        },
+        {
+          "id": "Varugirai",
+          "title": "Varugirai",
+          "category": "A.R.Rahman",
+          "file": "Varugirai"
+        },
+        {
+          "id": "Yakkai Thiri",
+          "title": "Yakkai Thiri",
+          "category": "A.R.Rahman",
+          "file": "Yakkai Thiri"
+        },
+        {
+          "id": "Yaro Yarodi",
+          "title": "Yaro Yarodi",
+          "category": "A.R.Rahman",
+          "file": "Yaro Yarodi"
+        }
+      ]
+    },
+    {
       "id": "Anirudh Ravichander",
       "name": "Anirudh Ravichander",
       "description": "239 songs",
@@ -1677,6 +2074,1759 @@
           "category": "Anirudh Ravichander",
           "album": "Love Insurance Kompany (LIK) - (2026)",
           "file": "Vibe Vaasey"
+        }
+      ]
+    },
+    {
+      "id": "G. V. Prakash Kumar",
+      "name": "G. V. Prakash Kumar",
+      "description": "27 songs",
+      "tracks": [
+        {
+          "id": "A Love Blossoms (Instrumental)",
+          "title": "A Love Blossoms (Instrumental)",
+          "category": "G. V. Prakash Kumar",
+          "file": "A Love Blossoms (Instrumental)"
+        },
+        {
+          "id": "A Square B Square (Female Version)",
+          "title": "A Square B Square (Female Version)",
+          "category": "G. V. Prakash Kumar",
+          "file": "A Square B Square (Female Version)"
+        },
+        {
+          "id": "A Square B Square (Male Version)",
+          "title": "A Square B Square (Male Version)",
+          "category": "G. V. Prakash Kumar",
+          "file": "A Square B Square (Male Version)"
+        },
+        {
+          "id": "Atho Antha Paravai Remix",
+          "title": "Atho Antha Paravai Remix",
+          "category": "G. V. Prakash Kumar",
+          "file": "Atho Antha Paravai Remix"
+        },
+        {
+          "id": "Ayyayo Nenju",
+          "title": "Ayyayo Nenju",
+          "category": "G. V. Prakash Kumar",
+          "file": "Ayyayo Nenju"
+        },
+        {
+          "id": "Celebration of Life",
+          "title": "Celebration of Life",
+          "category": "G. V. Prakash Kumar",
+          "file": "Celebration of Life"
+        },
+        {
+          "id": "En Vennilave",
+          "title": "En Vennilave",
+          "category": "G. V. Prakash Kumar",
+          "file": "En Vennilave"
+        },
+        {
+          "id": "Enakku Thaan",
+          "title": "Enakku Thaan",
+          "category": "G. V. Prakash Kumar",
+          "file": "Enakku Thaan"
+        },
+        {
+          "id": "Indha Paadhai",
+          "title": "Indha Paadhai",
+          "category": "G. V. Prakash Kumar",
+          "file": "Indha Paadhai"
+        },
+        {
+          "id": "Kannum Kannum Plus",
+          "title": "Kannum Kannum Plus",
+          "category": "G. V. Prakash Kumar",
+          "file": "Kannum Kannum Plus"
+        },
+        {
+          "id": "Maalai Neram",
+          "title": "Maalai Neram",
+          "category": "G. V. Prakash Kumar",
+          "file": "Maalai Neram"
+        },
+        {
+          "id": "Nenjellam Nindrayae",
+          "title": "Nenjellam Nindrayae",
+          "category": "G. V. Prakash Kumar",
+          "file": "Nenjellam Nindrayae"
+        },
+        {
+          "id": "Oh Balu",
+          "title": "Oh Balu",
+          "category": "G. V. Prakash Kumar",
+          "file": "Oh Balu"
+        },
+        {
+          "id": "Oh Eesa mix",
+          "title": "Oh Eesa mix",
+          "category": "G. V. Prakash Kumar",
+          "file": "Oh Eesa mix"
+        },
+        {
+          "id": "Oh Eesa",
+          "title": "Oh Eesa",
+          "category": "G. V. Prakash Kumar",
+          "file": "Oh Eesa"
+        },
+        {
+          "id": "Oru Vaanam",
+          "title": "Oru Vaanam",
+          "category": "G. V. Prakash Kumar",
+          "file": "Oru Vaanam"
+        },
+        {
+          "id": "Otha Sollaala",
+          "title": "Otha Sollaala",
+          "category": "G. V. Prakash Kumar",
+          "file": "Otha Sollaala"
+        },
+        {
+          "id": "Pemmanae",
+          "title": "Pemmanae",
+          "category": "G. V. Prakash Kumar",
+          "file": "Pemmanae"
+        },
+        {
+          "id": "Porkkalam (Tamil-Rap)",
+          "title": "Porkkalam (Tamil-Rap)",
+          "category": "G. V. Prakash Kumar",
+          "file": "Porkkalam (Tamil-Rap)"
+        },
+        {
+          "id": "Thaai Thindra Mannae",
+          "title": "Thaai Thindra Mannae",
+          "category": "G. V. Prakash Kumar",
+          "file": "Thaai Thindra Mannae"
+        },
+        {
+          "id": "Thaai Thindra Manne",
+          "title": "Thaai Thindra Manne",
+          "category": "G. V. Prakash Kumar",
+          "file": "Thaai Thindra Manne"
+        },
+        {
+          "id": "That Is Mahalakshmi",
+          "title": "That Is Mahalakshmi",
+          "category": "G. V. Prakash Kumar",
+          "file": "That Is Mahalakshmi"
+        },
+        {
+          "id": "The King Arrives",
+          "title": "The King Arrives",
+          "category": "G. V. Prakash Kumar",
+          "file": "The King Arrives"
+        },
+        {
+          "id": "Thiru Thiru Gananatha",
+          "title": "Thiru Thiru Gananatha",
+          "category": "G. V. Prakash Kumar",
+          "file": "Thiru Thiru Gananatha"
+        },
+        {
+          "id": "Warriors (English Rap)",
+          "title": "Warriors (English Rap)",
+          "category": "G. V. Prakash Kumar",
+          "file": "Warriors (English Rap)"
+        },
+        {
+          "id": "Yathe Yathe",
+          "title": "Yathe Yathe",
+          "category": "G. V. Prakash Kumar",
+          "file": "Yathe Yathe"
+        },
+        {
+          "id": "Yeanadi Yeanadi",
+          "title": "Yeanadi Yeanadi",
+          "category": "G. V. Prakash Kumar",
+          "file": "Yeanadi Yeanadi"
+        }
+      ]
+    },
+    {
+      "id": "Harris Jayaraj",
+      "name": "Harris Jayaraj",
+      "description": "60 songs",
+      "tracks": [
+        {
+          "id": "Aathadi Aathadi",
+          "title": "Aathadi Aathadi",
+          "category": "Harris Jayaraj",
+          "file": "Aathadi Aathadi"
+        },
+        {
+          "id": "Akka Song",
+          "title": "Akka Song",
+          "category": "Harris Jayaraj",
+          "file": "Akka Song"
+        },
+        {
+          "id": "Amudha Amudha",
+          "title": "Amudha Amudha",
+          "category": "Harris Jayaraj",
+          "file": "Amudha Amudha"
+        },
+        {
+          "id": "Anandam",
+          "title": "Anandam",
+          "category": "Harris Jayaraj",
+          "file": "Anandam"
+        },
+        {
+          "id": "Andangkaka",
+          "title": "Andangkaka",
+          "category": "Harris Jayaraj",
+          "file": "Andangkaka"
+        },
+        {
+          "id": "Arakonathil Aarambam",
+          "title": "Arakonathil Aarambam",
+          "category": "Harris Jayaraj",
+          "file": "Arakonathil Aarambam"
+        },
+        {
+          "id": "Badugas Night",
+          "title": "Badugas Night",
+          "category": "Harris Jayaraj",
+          "file": "Badugas Night"
+        },
+        {
+          "id": "Chant Of Arasatchi",
+          "title": "Chant Of Arasatchi",
+          "category": "Harris Jayaraj",
+          "file": "Chant Of Arasatchi"
+        },
+        {
+          "id": "Damakku Damakku",
+          "title": "Damakku Damakku",
+          "category": "Harris Jayaraj",
+          "file": "Damakku Damakku"
+        },
+        {
+          "id": "Danga Maari Oodhari",
+          "title": "Danga Maari Oodhari",
+          "category": "Harris Jayaraj",
+          "file": "Danga Maari Oodhari"
+        },
+        {
+          "id": "Deivangal Ingae",
+          "title": "Deivangal Ingae",
+          "category": "Harris Jayaraj",
+          "file": "Deivangal Ingae"
+        },
+        {
+          "id": "Dheko Dheko",
+          "title": "Dheko Dheko",
+          "category": "Harris Jayaraj",
+          "file": "Dheko Dheko"
+        },
+        {
+          "id": "Enadhuyirae",
+          "title": "Enadhuyirae",
+          "category": "Harris Jayaraj",
+          "file": "Enadhuyirae"
+        },
+        {
+          "id": "Hasili Fisiliye",
+          "title": "Hasili Fisiliye",
+          "category": "Harris Jayaraj",
+          "file": "Hasili Fisiliye"
+        },
+        {
+          "id": "Hey Raja (Oh Supernova)",
+          "title": "Hey Raja (Oh Supernova)",
+          "category": "Harris Jayaraj",
+          "file": "Hey Raja (Oh Supernova)"
+        },
+        {
+          "id": "Honey Honey",
+          "title": "Honey Honey",
+          "category": "Harris Jayaraj",
+          "file": "Honey Honey"
+        },
+        {
+          "id": "Ippadiye Vittu Vidu",
+          "title": "Ippadiye Vittu Vidu",
+          "category": "Harris Jayaraj",
+          "file": "Ippadiye Vittu Vidu"
+        },
+        {
+          "id": "Iruvathu Vayasula",
+          "title": "Iruvathu Vayasula",
+          "category": "Harris Jayaraj",
+          "file": "Iruvathu Vayasula"
+        },
+        {
+          "id": "Iyengaaru Veetu Azhage",
+          "title": "Iyengaaru Veetu Azhage",
+          "category": "Harris Jayaraj",
+          "file": "Iyengaaru Veetu Azhage"
+        },
+        {
+          "id": "Jothi Neranjava",
+          "title": "Jothi Neranjava",
+          "category": "Harris Jayaraj",
+          "file": "Jothi Neranjava"
+        },
+        {
+          "id": "Kaadhal Yaanai",
+          "title": "Kaadhal Yaanai",
+          "category": "Harris Jayaraj",
+          "file": "Kaadhal Yaanai"
+        },
+        {
+          "id": "Kannum Kannum Nokia",
+          "title": "Kannum Kannum Nokia",
+          "category": "Harris Jayaraj",
+          "file": "Kannum Kannum Nokia"
+        },
+        {
+          "id": "Love Pannu (Oru Punnagai Poove)",
+          "title": "Love Pannu (Oru Punnagai Poove)",
+          "category": "Harris Jayaraj",
+          "file": "Love Pannu (Oru Punnagai Poove)"
+        },
+        {
+          "id": "Maasi Maasi",
+          "title": "Maasi Maasi",
+          "category": "Harris Jayaraj",
+          "file": "Maasi Maasi"
+        },
+        {
+          "id": "Makkamishi",
+          "title": "Makkamishi",
+          "category": "Harris Jayaraj",
+          "file": "Makkamishi"
+        },
+        {
+          "id": "Medhakuthu Kaalu Rendum",
+          "title": "Medhakuthu Kaalu Rendum",
+          "category": "Harris Jayaraj",
+          "file": "Medhakuthu Kaalu Rendum"
+        },
+        {
+          "id": "Mudhal Mazhai",
+          "title": "Mudhal Mazhai",
+          "category": "Harris Jayaraj",
+          "file": "Mudhal Mazhai"
+        },
+        {
+          "id": "Mugalae Mugalae",
+          "title": "Mugalae Mugalae",
+          "category": "Harris Jayaraj",
+          "file": "Mugalae Mugalae"
+        },
+        {
+          "id": "Mun Andhi",
+          "title": "Mun Andhi",
+          "category": "Harris Jayaraj",
+          "file": "Mun Andhi"
+        },
+        {
+          "id": "Mutham Mutham",
+          "title": "Mutham Mutham",
+          "category": "Harris Jayaraj",
+          "file": "Mutham Mutham"
+        },
+        {
+          "id": "Nenje Nenje",
+          "title": "Nenje Nenje",
+          "category": "Harris Jayaraj",
+          "file": "Nenje Nenje"
+        },
+        {
+          "id": "O Nenjae",
+          "title": "O Nenjae",
+          "category": "Harris Jayaraj",
+          "file": "O Nenjae"
+        },
+        {
+          "id": "Oh Ringa Ringa",
+          "title": "Oh Ringa Ringa",
+          "category": "Harris Jayaraj",
+          "file": "Oh Ringa Ringa"
+        },
+        {
+          "id": "Oh Sukumari",
+          "title": "Oh Sukumari",
+          "category": "Harris Jayaraj",
+          "file": "Oh Sukumari"
+        },
+        {
+          "id": "Oru Mugamo",
+          "title": "Oru Mugamo",
+          "category": "Harris Jayaraj",
+          "file": "Oru Mugamo"
+        },
+        {
+          "id": "Oru Paarvai Paar",
+          "title": "Oru Paarvai Paar",
+          "category": "Harris Jayaraj",
+          "file": "Oru Paarvai Paar"
+        },
+        {
+          "id": "Ottaiyanum Senja Thara",
+          "title": "Ottaiyanum Senja Thara",
+          "category": "Harris Jayaraj",
+          "file": "Ottaiyanum Senja Thara"
+        },
+        {
+          "id": "Oyaayiye Yaayiye",
+          "title": "Oyaayiye Yaayiye",
+          "category": "Harris Jayaraj",
+          "file": "Oyaayiye Yaayiye"
+        },
+        {
+          "id": "Pala Palakura",
+          "title": "Pala Palakura",
+          "category": "Harris Jayaraj",
+          "file": "Pala Palakura"
+        },
+        {
+          "id": "Party Music",
+          "title": "Party Music",
+          "category": "Harris Jayaraj",
+          "file": "Party Music"
+        },
+        {
+          "id": "Pathu Viral",
+          "title": "Pathu Viral",
+          "category": "Harris Jayaraj",
+          "file": "Pathu Viral"
+        },
+        {
+          "id": "Poove Vai Pesum Pothu",
+          "title": "Poove Vai Pesum Pothu",
+          "category": "Harris Jayaraj",
+          "file": "Poove Vai Pesum Pothu"
+        },
+        {
+          "id": "Punnakunnu",
+          "title": "Punnakunnu",
+          "category": "Harris Jayaraj",
+          "file": "Punnakunnu"
+        },
+        {
+          "id": "Ragasiya Kanavugal",
+          "title": "Ragasiya Kanavugal",
+          "category": "Harris Jayaraj",
+          "file": "Ragasiya Kanavugal"
+        },
+        {
+          "id": "Rangu Rangamma",
+          "title": "Rangu Rangamma",
+          "category": "Harris Jayaraj",
+          "file": "Rangu Rangamma"
+        },
+        {
+          "id": "Roja Kadale",
+          "title": "Roja Kadale",
+          "category": "Harris Jayaraj",
+          "file": "Roja Kadale"
+        },
+        {
+          "id": "Saiyo Saiyo",
+          "title": "Saiyo Saiyo",
+          "category": "Harris Jayaraj",
+          "file": "Saiyo Saiyo"
+        },
+        {
+          "id": "Sariya Thavara",
+          "title": "Sariya Thavara",
+          "category": "Harris Jayaraj",
+          "file": "Sariya Thavara"
+        },
+        {
+          "id": "Siru Paarvayalae",
+          "title": "Siru Paarvayalae",
+          "category": "Harris Jayaraj",
+          "file": "Siru Paarvayalae"
+        },
+        {
+          "id": "Soodamani",
+          "title": "Soodamani",
+          "category": "Harris Jayaraj",
+          "file": "Soodamani"
+        },
+        {
+          "id": "The Rise of Damo",
+          "title": "The Rise of Damo",
+          "category": "Harris Jayaraj",
+          "file": "The Rise of Damo"
+        },
+        {
+          "id": "Theme Music",
+          "title": "Theme Music",
+          "category": "Harris Jayaraj",
+          "file": "Theme Music"
+        },
+        {
+          "id": "Thodu Vaanam",
+          "title": "Thodu Vaanam",
+          "category": "Harris Jayaraj",
+          "file": "Thodu Vaanam"
+        },
+        {
+          "id": "Ukkadathu Papadame",
+          "title": "Ukkadathu Papadame",
+          "category": "Harris Jayaraj",
+          "file": "Ukkadathu Papadame"
+        },
+        {
+          "id": "Vaarayo Vaarayo",
+          "title": "Vaarayo Vaarayo",
+          "category": "Harris Jayaraj",
+          "file": "Vaarayo Vaarayo"
+        },
+        {
+          "id": "Vizhi Moodi Yosithaal",
+          "title": "Vizhi Moodi Yosithaal",
+          "category": "Harris Jayaraj",
+          "file": "Vizhi Moodi Yosithaal"
+        },
+        {
+          "id": "Yamma Yamma",
+          "title": "Yamma Yamma",
+          "category": "Harris Jayaraj",
+          "file": "Yamma Yamma"
+        },
+        {
+          "id": "Yellae Lama",
+          "title": "Yellae Lama",
+          "category": "Harris Jayaraj",
+          "file": "Yellae Lama"
+        },
+        {
+          "id": "Yeno Yeno Panithuli",
+          "title": "Yeno Yeno Panithuli",
+          "category": "Harris Jayaraj",
+          "file": "Yeno Yeno Panithuli"
+        },
+        {
+          "id": "Yolo (You Only Live Once)",
+          "title": "Yolo (You Only Live Once)",
+          "category": "Harris Jayaraj",
+          "file": "Yolo (You Only Live Once)"
+        }
+      ]
+    },
+    {
+      "id": "Hiphop Tamizha",
+      "name": "Hiphop Tamizha",
+      "description": "52 songs",
+      "tracks": [
+        {
+          "id": "A Mothers Fight",
+          "title": "A Mothers Fight",
+          "category": "Hiphop Tamizha",
+          "file": "A Mothers Fight"
+        },
+        {
+          "id": "Aalambana Enga",
+          "title": "Aalambana Enga",
+          "category": "Hiphop Tamizha",
+          "file": "Aalambana Enga"
+        },
+        {
+          "id": "Achacho",
+          "title": "Achacho",
+          "category": "Hiphop Tamizha",
+          "file": "Achacho"
+        },
+        {
+          "id": "Amma (The Amman Song)",
+          "title": "Amma (The Amman Song)",
+          "category": "Hiphop Tamizha",
+          "file": "Amma (The Amman Song)"
+        },
+        {
+          "id": "Amman song",
+          "title": "Amman song",
+          "category": "Hiphop Tamizha",
+          "file": "Amman song"
+        },
+        {
+          "id": "Anbae Arivu",
+          "title": "Anbae Arivu",
+          "category": "Hiphop Tamizha",
+          "file": "Anbae Arivu"
+        },
+        {
+          "id": "Anger Served Hot",
+          "title": "Anger Served Hot",
+          "category": "Hiphop Tamizha",
+          "file": "Anger Served Hot"
+        },
+        {
+          "id": "Arakkiyae",
+          "title": "Arakkiyae",
+          "category": "Hiphop Tamizha",
+          "file": "Arakkiyae"
+        },
+        {
+          "id": "Aranmanai 2 (Theme Music)",
+          "title": "Aranmanai 2 (Theme Music)",
+          "category": "Hiphop Tamizha",
+          "file": "Aranmanai 2 (Theme Music)"
+        },
+        {
+          "id": "Ashes Of The Past",
+          "title": "Ashes Of The Past",
+          "category": "Hiphop Tamizha",
+          "file": "Ashes Of The Past"
+        },
+        {
+          "id": "Aye Aye Aye",
+          "title": "Aye Aye Aye",
+          "category": "Hiphop Tamizha",
+          "file": "Aye Aye Aye"
+        },
+        {
+          "id": "Azhage",
+          "title": "Azhage",
+          "category": "Hiphop Tamizha",
+          "file": "Azhage"
+        },
+        {
+          "id": "Blessings From The Divine",
+          "title": "Blessings From The Divine",
+          "category": "Hiphop Tamizha",
+          "file": "Blessings From The Divine"
+        },
+        {
+          "id": "Boomba Boomba",
+          "title": "Boomba Boomba",
+          "category": "Hiphop Tamizha",
+          "file": "Boomba Boomba"
+        },
+        {
+          "id": "Bye Bye Bhaiya",
+          "title": "Bye Bye Bhaiya",
+          "category": "Hiphop Tamizha",
+          "file": "Bye Bye Bhaiya"
+        },
+        {
+          "id": "Certified Self Made",
+          "title": "Certified Self Made",
+          "category": "Hiphop Tamizha",
+          "file": "Certified Self Made"
+        },
+        {
+          "id": "Chinna Paiyan",
+          "title": "Chinna Paiyan",
+          "category": "Hiphop Tamizha",
+          "file": "Chinna Paiyan"
+        },
+        {
+          "id": "Eppa Paarthaalum",
+          "title": "Eppa Paarthaalum",
+          "category": "Hiphop Tamizha",
+          "file": "Eppa Paarthaalum"
+        },
+        {
+          "id": "Escape Through The Wild",
+          "title": "Escape Through The Wild",
+          "category": "Hiphop Tamizha",
+          "file": "Escape Through The Wild"
+        },
+        {
+          "id": "Fiyah Fiyah",
+          "title": "Fiyah Fiyah",
+          "category": "Hiphop Tamizha",
+          "file": "Fiyah Fiyah"
+        },
+        {
+          "id": "Ghost Theme",
+          "title": "Ghost Theme",
+          "category": "Hiphop Tamizha",
+          "file": "Ghost Theme"
+        },
+        {
+          "id": "Held By Her Presence",
+          "title": "Held By Her Presence",
+          "category": "Hiphop Tamizha",
+          "file": "Held By Her Presence"
+        },
+        {
+          "id": "Jo Jo",
+          "title": "Jo Jo",
+          "category": "Hiphop Tamizha",
+          "file": "Jo Jo"
+        },
+        {
+          "id": "Kalangathey",
+          "title": "Kalangathey",
+          "category": "Hiphop Tamizha",
+          "file": "Kalangathey"
+        },
+        {
+          "id": "Kanavugal",
+          "title": "Kanavugal",
+          "category": "Hiphop Tamizha",
+          "file": "Kanavugal"
+        },
+        {
+          "id": "Kannirendum",
+          "title": "Kannirendum",
+          "category": "Hiphop Tamizha",
+          "file": "Kannirendum"
+        },
+        {
+          "id": "Kuchi Mittai",
+          "title": "Kuchi Mittai",
+          "category": "Hiphop Tamizha",
+          "file": "Kuchi Mittai"
+        },
+        {
+          "id": "Lights Camera Action",
+          "title": "Lights Camera Action",
+          "category": "Hiphop Tamizha",
+          "file": "Lights Camera Action"
+        },
+        {
+          "id": "Madras To Madurai",
+          "title": "Madras To Madurai",
+          "category": "Hiphop Tamizha",
+          "file": "Madras To Madurai"
+        },
+        {
+          "id": "Maula Maula",
+          "title": "Maula Maula",
+          "category": "Hiphop Tamizha",
+          "file": "Maula Maula"
+        },
+        {
+          "id": "Maya Maya",
+          "title": "Maya Maya",
+          "category": "Hiphop Tamizha",
+          "file": "Maya Maya"
+        },
+        {
+          "id": "Mayas Encounter",
+          "title": "Mayas Encounter",
+          "category": "Hiphop Tamizha",
+          "file": "Mayas Encounter"
+        },
+        {
+          "id": "Nee Sirichalum",
+          "title": "Nee Sirichalum",
+          "category": "Hiphop Tamizha",
+          "file": "Nee Sirichalum"
+        },
+        {
+          "id": "Oorukulla Pudusa",
+          "title": "Oorukulla Pudusa",
+          "category": "Hiphop Tamizha",
+          "file": "Oorukulla Pudusa"
+        },
+        {
+          "id": "Opening Song Ithu",
+          "title": "Opening Song Ithu",
+          "category": "Hiphop Tamizha",
+          "file": "Opening Song Ithu"
+        },
+        {
+          "id": "Oyile Oyile",
+          "title": "Oyile Oyile",
+          "category": "Hiphop Tamizha",
+          "file": "Oyile Oyile"
+        },
+        {
+          "id": "Party with the Pei",
+          "title": "Party with the Pei",
+          "category": "Hiphop Tamizha",
+          "file": "Party with the Pei"
+        },
+        {
+          "id": "Pazhagikalam",
+          "title": "Pazhagikalam",
+          "category": "Hiphop Tamizha",
+          "file": "Pazhagikalam"
+        },
+        {
+          "id": "Poraada Poraada",
+          "title": "Poraada Poraada",
+          "category": "Hiphop Tamizha",
+          "file": "Poraada Poraada"
+        },
+        {
+          "id": "Ready Steady Go",
+          "title": "Ready Steady Go",
+          "category": "Hiphop Tamizha",
+          "file": "Ready Steady Go"
+        },
+        {
+          "id": "Sakthi Finds Her Mom Dead",
+          "title": "Sakthi Finds Her Mom Dead",
+          "category": "Hiphop Tamizha",
+          "file": "Sakthi Finds Her Mom Dead"
+        },
+        {
+          "id": "Sneaky Trunk Heist",
+          "title": "Sneaky Trunk Heist",
+          "category": "Hiphop Tamizha",
+          "file": "Sneaky Trunk Heist"
+        },
+        {
+          "id": "Thanga Sela",
+          "title": "Thanga Sela",
+          "category": "Hiphop Tamizha",
+          "file": "Thanga Sela"
+        },
+        {
+          "id": "The Baak",
+          "title": "The Baak",
+          "category": "Hiphop Tamizha",
+          "file": "The Baak"
+        },
+        {
+          "id": "The Face Of Death",
+          "title": "The Face Of Death",
+          "category": "Hiphop Tamizha",
+          "file": "The Face Of Death"
+        },
+        {
+          "id": "The Final Goodbye",
+          "title": "The Final Goodbye",
+          "category": "Hiphop Tamizha",
+          "file": "The Final Goodbye"
+        },
+        {
+          "id": "The Hidden Link",
+          "title": "The Hidden Link",
+          "category": "Hiphop Tamizha",
+          "file": "The Hidden Link"
+        },
+        {
+          "id": "The Possession Begins",
+          "title": "The Possession Begins",
+          "category": "Hiphop Tamizha",
+          "file": "The Possession Begins"
+        },
+        {
+          "id": "The Priest's Path",
+          "title": "The Priest's Path",
+          "category": "Hiphop Tamizha",
+          "file": "The Priest's Path"
+        },
+        {
+          "id": "Unspoken Apologies",
+          "title": "Unspoken Apologies",
+          "category": "Hiphop Tamizha",
+          "file": "Unspoken Apologies"
+        },
+        {
+          "id": "Va Va Va Vannila",
+          "title": "Va Va Va Vannila",
+          "category": "Hiphop Tamizha",
+          "file": "Va Va Va Vannila"
+        },
+        {
+          "id": "Yaarenna Sonnalum",
+          "title": "Yaarenna Sonnalum",
+          "category": "Hiphop Tamizha",
+          "file": "Yaarenna Sonnalum"
+        }
+      ]
+    },
+    {
+      "id": "Ilaiyaraaja",
+      "name": "Ilaiyaraaja",
+      "description": "29 songs",
+      "tracks": [
+        {
+          "id": "Aattu Kutti Muttai Ittu",
+          "title": "Aattu Kutti Muttai Ittu",
+          "category": "Ilaiyaraaja",
+          "file": "Aattu Kutti Muttai Ittu"
+        },
+        {
+          "id": "Cholam Vethakkayile",
+          "title": "Cholam Vethakkayile",
+          "category": "Ilaiyaraaja",
+          "file": "Cholam Vethakkayile"
+        },
+        {
+          "id": "Enna Paada (Sad)",
+          "title": "Enna Paada (Sad)",
+          "category": "Ilaiyaraaja",
+          "file": "Enna Paada (Sad)"
+        },
+        {
+          "id": "Enna Paada",
+          "title": "Enna Paada",
+          "category": "Ilaiyaraaja",
+          "file": "Enna Paada"
+        },
+        {
+          "id": "Ennaal Mudiyathu Summaa Iruppathu",
+          "title": "Ennaal Mudiyathu Summaa Iruppathu",
+          "category": "Ilaiyaraaja",
+          "file": "Ennaal Mudiyathu Summaa Iruppathu"
+        },
+        {
+          "id": "Ennaal Mudiyathu",
+          "title": "Ennaal Mudiyathu",
+          "category": "Ilaiyaraaja",
+          "file": "Ennaal Mudiyathu"
+        },
+        {
+          "id": "Indiran Vanthathum",
+          "title": "Indiran Vanthathum",
+          "category": "Ilaiyaraaja",
+          "file": "Indiran Vanthathum"
+        },
+        {
+          "id": "Iraivanai Thedi",
+          "title": "Iraivanai Thedi",
+          "category": "Ilaiyaraaja",
+          "file": "Iraivanai Thedi"
+        },
+        {
+          "id": "Kadaloram Kadaloram",
+          "title": "Kadaloram Kadaloram",
+          "category": "Ilaiyaraaja",
+          "file": "Kadaloram Kadaloram"
+        },
+        {
+          "id": "Kadhal Kasakkuthaiya",
+          "title": "Kadhal Kasakkuthaiya",
+          "category": "Ilaiyaraaja",
+          "file": "Kadhal Kasakkuthaiya"
+        },
+        {
+          "id": "Kalloori Manavaraa",
+          "title": "Kalloori Manavaraa",
+          "category": "Ilaiyaraaja",
+          "file": "Kalloori Manavaraa"
+        },
+        {
+          "id": "Kanavugale Kanavugale",
+          "title": "Kanavugale Kanavugale",
+          "category": "Ilaiyaraaja",
+          "file": "Kanavugale Kanavugale"
+        },
+        {
+          "id": "Kodi Katti Parakkuthada",
+          "title": "Kodi Katti Parakkuthada",
+          "category": "Ilaiyaraaja",
+          "file": "Kodi Katti Parakkuthada"
+        },
+        {
+          "id": "Kodikatti Parakkura Raaja",
+          "title": "Kodikatti Parakkura Raaja",
+          "category": "Ilaiyaraaja",
+          "file": "Kodikatti Parakkura Raaja"
+        },
+        {
+          "id": "Kulikkum Pothile",
+          "title": "Kulikkum Pothile",
+          "category": "Ilaiyaraaja",
+          "file": "Kulikkum Pothile"
+        },
+        {
+          "id": "Kuyile Kuyile Poonguyile",
+          "title": "Kuyile Kuyile Poonguyile",
+          "category": "Ilaiyaraaja",
+          "file": "Kuyile Kuyile Poonguyile"
+        },
+        {
+          "id": "Machanukku",
+          "title": "Machanukku",
+          "category": "Ilaiyaraaja",
+          "file": "Machanukku"
+        },
+        {
+          "id": "Manjakkulichi",
+          "title": "Manjakkulichi",
+          "category": "Ilaiyaraaja",
+          "file": "Manjakkulichi"
+        },
+        {
+          "id": "Megam Karukkudhu",
+          "title": "Megam Karukkudhu",
+          "category": "Ilaiyaraaja",
+          "file": "Megam Karukkudhu"
+        },
+        {
+          "id": "Naalum Naalum V2",
+          "title": "Naalum Naalum V2",
+          "category": "Ilaiyaraaja",
+          "file": "Naalum Naalum V2"
+        },
+        {
+          "id": "Naalum Naalum",
+          "title": "Naalum Naalum",
+          "category": "Ilaiyaraaja",
+          "file": "Naalum Naalum"
+        },
+        {
+          "id": "Oru Raagam",
+          "title": "Oru Raagam",
+          "category": "Ilaiyaraaja",
+          "file": "Oru Raagam"
+        },
+        {
+          "id": "Otti Vandha Singa Kutty",
+          "title": "Otti Vandha Singa Kutty",
+          "category": "Ilaiyaraaja",
+          "file": "Otti Vandha Singa Kutty"
+        },
+        {
+          "id": "Senthoora Poove",
+          "title": "Senthoora Poove",
+          "category": "Ilaiyaraaja",
+          "file": "Senthoora Poove"
+        },
+        {
+          "id": "Sevanthi Poo",
+          "title": "Sevanthi Poo",
+          "category": "Ilaiyaraaja",
+          "file": "Sevanthi Poo"
+        },
+        {
+          "id": "Thedi Thedi",
+          "title": "Thedi Thedi",
+          "category": "Ilaiyaraaja",
+          "file": "Thedi Thedi"
+        },
+        {
+          "id": "Unnaiyum Ennaiyum",
+          "title": "Unnaiyum Ennaiyum",
+          "category": "Ilaiyaraaja",
+          "file": "Unnaiyum Ennaiyum"
+        },
+        {
+          "id": "Yethi Vacha Neruppinile",
+          "title": "Yethi Vacha Neruppinile",
+          "category": "Ilaiyaraaja",
+          "file": "Yethi Vacha Neruppinile"
+        },
+        {
+          "id": "Yethivecha",
+          "title": "Yethivecha",
+          "category": "Ilaiyaraaja",
+          "file": "Yethivecha"
+        }
+      ]
+    },
+    {
+      "id": "Sai Abhyankkar",
+      "name": "Sai Abhyankkar",
+      "description": "53 songs",
+      "tracks": [
+        {
+          "id": "Aadhiyaman Finds The Truth",
+          "title": "Aadhiyaman Finds The Truth",
+          "category": "Sai Abhyankkar",
+          "file": "Aadhiyaman Finds The Truth"
+        },
+        {
+          "id": "Aadhiyaman Tries To Threaten Kural",
+          "title": "Aadhiyaman Tries To Threaten Kural",
+          "category": "Sai Abhyankkar",
+          "file": "Aadhiyaman Tries To Threaten Kural"
+        },
+        {
+          "id": "Aadhiyaman's Den",
+          "title": "Aadhiyaman's Den",
+          "category": "Sai Abhyankkar",
+          "file": "Aadhiyaman's Den"
+        },
+        {
+          "id": "Aadhiyaman's Prank",
+          "title": "Aadhiyaman's Prank",
+          "category": "Sai Abhyankkar",
+          "file": "Aadhiyaman's Prank"
+        },
+        {
+          "id": "Aasa Kooda",
+          "title": "Aasa Kooda",
+          "category": "Sai Abhyankkar",
+          "file": "Aasa Kooda"
+        },
+        {
+          "id": "Abort This Child",
+          "title": "Abort This Child",
+          "category": "Sai Abhyankkar",
+          "file": "Abort This Child"
+        },
+        {
+          "id": "Abortion Cancel",
+          "title": "Abortion Cancel",
+          "category": "Sai Abhyankkar",
+          "file": "Abortion Cancel"
+        },
+        {
+          "id": "Amma Advice",
+          "title": "Amma Advice",
+          "category": "Sai Abhyankkar",
+          "file": "Amma Advice"
+        },
+        {
+          "id": "Atleast Realize Now",
+          "title": "Atleast Realize Now",
+          "category": "Sai Abhyankkar",
+          "file": "Atleast Realize Now"
+        },
+        {
+          "id": "Benz In The Universe",
+          "title": "Benz In The Universe",
+          "category": "Sai Abhyankkar",
+          "file": "Benz In The Universe"
+        },
+        {
+          "id": "Blud Is On His Way",
+          "title": "Blud Is On His Way",
+          "category": "Sai Abhyankkar",
+          "file": "Blud Is On His Way"
+        },
+        {
+          "id": "Castiest Dad",
+          "title": "Castiest Dad",
+          "category": "Sai Abhyankkar",
+          "file": "Castiest Dad"
+        },
+        {
+          "id": "Chocolate Gun Prank",
+          "title": "Chocolate Gun Prank",
+          "category": "Sai Abhyankkar",
+          "file": "Chocolate Gun Prank"
+        },
+        {
+          "id": "Dude Orchestral Suite",
+          "title": "Dude Orchestral Suite",
+          "category": "Sai Abhyankkar",
+          "file": "Dude Orchestral Suite"
+        },
+        {
+          "id": "Dude Trailer Blast (Theme)",
+          "title": "Dude Trailer Blast (Theme)",
+          "category": "Sai Abhyankkar",
+          "file": "Dude Trailer Blast (Theme)"
+        },
+        {
+          "id": "Ex Flashback",
+          "title": "Ex Flashback",
+          "category": "Sai Abhyankkar",
+          "file": "Ex Flashback"
+        },
+        {
+          "id": "Fake Marriage",
+          "title": "Fake Marriage",
+          "category": "Sai Abhyankkar",
+          "file": "Fake Marriage"
+        },
+        {
+          "id": "Full Form La Irukinga",
+          "title": "Full Form La Irukinga",
+          "category": "Sai Abhyankkar",
+          "file": "Full Form La Irukinga"
+        },
+        {
+          "id": "Gaja Entry",
+          "title": "Gaja Entry",
+          "category": "Sai Abhyankkar",
+          "file": "Gaja Entry"
+        },
+        {
+          "id": "Kannukulla (Reprise)",
+          "title": "Kannukulla (Reprise)",
+          "category": "Sai Abhyankkar",
+          "file": "Kannukulla (Reprise)"
+        },
+        {
+          "id": "Kannukulla",
+          "title": "Kannukulla",
+          "category": "Sai Abhyankkar",
+          "file": "Kannukulla"
+        },
+        {
+          "id": "Kanukulla Bgm",
+          "title": "Kanukulla Bgm",
+          "category": "Sai Abhyankkar",
+          "file": "Kanukulla Bgm"
+        },
+        {
+          "id": "Kural Breaks",
+          "title": "Kural Breaks",
+          "category": "Sai Abhyankkar",
+          "file": "Kural Breaks"
+        },
+        {
+          "id": "Kural's Confession",
+          "title": "Kural's Confession",
+          "category": "Sai Abhyankkar",
+          "file": "Kural's Confession"
+        },
+        {
+          "id": "Kural's Confusion",
+          "title": "Kural's Confusion",
+          "category": "Sai Abhyankkar",
+          "file": "Kural's Confusion"
+        },
+        {
+          "id": "Kural's Entry",
+          "title": "Kural's Entry",
+          "category": "Sai Abhyankkar",
+          "file": "Kural's Entry"
+        },
+        {
+          "id": "Kuralarasi Is No More",
+          "title": "Kuralarasi Is No More",
+          "category": "Sai Abhyankkar",
+          "file": "Kuralarasi Is No More"
+        },
+        {
+          "id": "Last 7 Minutes",
+          "title": "Last 7 Minutes",
+          "category": "Sai Abhyankkar",
+          "file": "Last 7 Minutes"
+        },
+        {
+          "id": "Let The Celebration Begin",
+          "title": "Let The Celebration Begin",
+          "category": "Sai Abhyankkar",
+          "file": "Let The Celebration Begin"
+        },
+        {
+          "id": "Mama's Boy",
+          "title": "Mama's Boy",
+          "category": "Sai Abhyankkar",
+          "file": "Mama's Boy"
+        },
+        {
+          "id": "Muththe Muththarame",
+          "title": "Muththe Muththarame",
+          "category": "Sai Abhyankkar",
+          "file": "Muththe Muththarame"
+        },
+        {
+          "id": "Nallaru Po Orchestral",
+          "title": "Nallaru Po Orchestral",
+          "category": "Sai Abhyankkar",
+          "file": "Nallaru Po Orchestral"
+        },
+        {
+          "id": "Nallaru Po",
+          "title": "Nallaru Po",
+          "category": "Sai Abhyankkar",
+          "file": "Nallaru Po"
+        },
+        {
+          "id": "Newly Married",
+          "title": "Newly Married",
+          "category": "Sai Abhyankkar",
+          "file": "Newly Married"
+        },
+        {
+          "id": "OG Aadhiyaman",
+          "title": "OG Aadhiyaman",
+          "category": "Sai Abhyankkar",
+          "file": "OG Aadhiyaman"
+        },
+        {
+          "id": "On Stage Perfomance",
+          "title": "On Stage Perfomance",
+          "category": "Sai Abhyankkar",
+          "file": "On Stage Perfomance"
+        },
+        {
+          "id": "Oorum Blood Unplugged",
+          "title": "Oorum Blood Unplugged",
+          "category": "Sai Abhyankkar",
+          "file": "Oorum Blood Unplugged"
+        },
+        {
+          "id": "Oorum Blood",
+          "title": "Oorum Blood",
+          "category": "Sai Abhyankkar",
+          "file": "Oorum Blood"
+        },
+        {
+          "id": "Paari Entry",
+          "title": "Paari Entry",
+          "category": "Sai Abhyankkar",
+          "file": "Paari Entry"
+        },
+        {
+          "id": "Please Don't Forget Me",
+          "title": "Please Don't Forget Me",
+          "category": "Sai Abhyankkar",
+          "file": "Please Don't Forget Me"
+        },
+        {
+          "id": "Pookie Gaja",
+          "title": "Pookie Gaja",
+          "category": "Sai Abhyankkar",
+          "file": "Pookie Gaja"
+        },
+        {
+          "id": "She Was My Best Moment",
+          "title": "She Was My Best Moment",
+          "category": "Sai Abhyankkar",
+          "file": "She Was My Best Moment"
+        },
+        {
+          "id": "Singari Acoustic Version",
+          "title": "Singari Acoustic Version",
+          "category": "Sai Abhyankkar",
+          "file": "Singari Acoustic Version"
+        },
+        {
+          "id": "Singari",
+          "title": "Singari",
+          "category": "Sai Abhyankkar",
+          "file": "Singari"
+        },
+        {
+          "id": "That Was Not To Hurt You",
+          "title": "That Was Not To Hurt You",
+          "category": "Sai Abhyankkar",
+          "file": "That Was Not To Hurt You"
+        },
+        {
+          "id": "The Birth",
+          "title": "The Birth",
+          "category": "Sai Abhyankkar",
+          "file": "The Birth"
+        },
+        {
+          "id": "The Kill",
+          "title": "The Kill",
+          "category": "Sai Abhyankkar",
+          "file": "The Kill"
+        },
+        {
+          "id": "The Metro Proposal",
+          "title": "The Metro Proposal",
+          "category": "Sai Abhyankkar",
+          "file": "The Metro Proposal"
+        },
+        {
+          "id": "The Sacrifice",
+          "title": "The Sacrifice",
+          "category": "Sai Abhyankkar",
+          "file": "The Sacrifice"
+        },
+        {
+          "id": "Twin Fish Walter",
+          "title": "Twin Fish Walter",
+          "category": "Sai Abhyankkar",
+          "file": "Twin Fish Walter"
+        },
+        {
+          "id": "Who Is This Dude_",
+          "title": "Who Is This Dude_",
+          "category": "Sai Abhyankkar",
+          "file": "Who Is This Dude_"
+        },
+        {
+          "id": "You Can Never Question Me",
+          "title": "You Can Never Question Me",
+          "category": "Sai Abhyankkar",
+          "file": "You Can Never Question Me"
+        },
+        {
+          "id": "Yumabaibesa",
+          "title": "Yumabaibesa",
+          "category": "Sai Abhyankkar",
+          "file": "Yumabaibesa"
+        }
+      ]
+    },
+    {
+      "id": "Vijay Antony",
+      "name": "Vijay Antony",
+      "description": "30 songs",
+      "tracks": [
+        {
+          "id": "A Aa E Ee",
+          "title": "A Aa E Ee",
+          "category": "Vijay Antony",
+          "file": "A Aa E Ee"
+        },
+        {
+          "id": "Aararo Aariraro",
+          "title": "Aararo Aariraro",
+          "category": "Vijay Antony",
+          "file": "Aararo Aariraro"
+        },
+        {
+          "id": "Aval Appadi Onrum",
+          "title": "Aval Appadi Onrum",
+          "category": "Vijay Antony",
+          "file": "Aval Appadi Onrum"
+        },
+        {
+          "id": "Dingi Tappu",
+          "title": "Dingi Tappu",
+          "category": "Vijay Antony",
+          "file": "Dingi Tappu"
+        },
+        {
+          "id": "GST Ya Maari Neeyum",
+          "title": "GST Ya Maari Neeyum",
+          "category": "Vijay Antony",
+          "file": "GST Ya Maari Neeyum"
+        },
+        {
+          "id": "Gujju Gujju",
+          "title": "Gujju Gujju",
+          "category": "Vijay Antony",
+          "file": "Gujju Gujju"
+        },
+        {
+          "id": "Idhayam Nagaruthe",
+          "title": "Idhayam Nagaruthe",
+          "category": "Vijay Antony",
+          "file": "Idhayam Nagaruthe"
+        },
+        {
+          "id": "Kanni Vedi",
+          "title": "Kanni Vedi",
+          "category": "Vijay Antony",
+          "file": "Kanni Vedi"
+        },
+        {
+          "id": "Kannil Theriyum",
+          "title": "Kannil Theriyum",
+          "category": "Vijay Antony",
+          "file": "Kannil Theriyum"
+        },
+        {
+          "id": "Karungali Naayae",
+          "title": "Karungali Naayae",
+          "category": "Vijay Antony",
+          "file": "Karungali Naayae"
+        },
+        {
+          "id": "Kathaigalai Pesum",
+          "title": "Kathaigalai Pesum",
+          "category": "Vijay Antony",
+          "file": "Kathaigalai Pesum"
+        },
+        {
+          "id": "Kol Tanaa Rangubhai",
+          "title": "Kol Tanaa Rangubhai",
+          "category": "Vijay Antony",
+          "file": "Kol Tanaa Rangubhai"
+        },
+        {
+          "id": "Maadathu Oli Vilaka",
+          "title": "Maadathu Oli Vilaka",
+          "category": "Vijay Antony",
+          "file": "Maadathu Oli Vilaka"
+        },
+        {
+          "id": "Mena Minuki",
+          "title": "Mena Minuki",
+          "category": "Vijay Antony",
+          "file": "Mena Minuki"
+        },
+        {
+          "id": "Natta Nadu Rathiri",
+          "title": "Natta Nadu Rathiri",
+          "category": "Vijay Antony",
+          "file": "Natta Nadu Rathiri"
+        },
+        {
+          "id": "Nee Otha Sollu",
+          "title": "Nee Otha Sollu",
+          "category": "Vijay Antony",
+          "file": "Nee Otha Sollu"
+        },
+        {
+          "id": "Oodathey Oodathey (Pathos)",
+          "title": "Oodathey Oodathey (Pathos)",
+          "category": "Vijay Antony",
+          "file": "Oodathey Oodathey (Pathos)"
+        },
+        {
+          "id": "Oodathey Oodathey Nayangal",
+          "title": "Oodathey Oodathey Nayangal",
+          "category": "Vijay Antony",
+          "file": "Oodathey Oodathey Nayangal"
+        },
+        {
+          "id": "Othayadi Pathai",
+          "title": "Othayadi Pathai",
+          "category": "Vijay Antony",
+          "file": "Othayadi Pathai"
+        },
+        {
+          "id": "Ottu Motha Pasamum (Theme)",
+          "title": "Ottu Motha Pasamum (Theme)",
+          "category": "Vijay Antony",
+          "file": "Ottu Motha Pasamum (Theme)"
+        },
+        {
+          "id": "Paalayan Kottai",
+          "title": "Paalayan Kottai",
+          "category": "Vijay Antony",
+          "file": "Paalayan Kottai"
+        },
+        {
+          "id": "Po Po Veliye Po",
+          "title": "Po Po Veliye Po",
+          "category": "Vijay Antony",
+          "file": "Po Po Veliye Po"
+        },
+        {
+          "id": "Tappo Tappo",
+          "title": "Tappo Tappo",
+          "category": "Vijay Antony",
+          "file": "Tappo Tappo"
+        },
+        {
+          "id": "Thangama Vairama Enna Solla",
+          "title": "Thangama Vairama Enna Solla",
+          "category": "Vijay Antony",
+          "file": "Thangama Vairama Enna Solla"
+        },
+        {
+          "id": "Unn Perai Sollum",
+          "title": "Unn Perai Sollum",
+          "category": "Vijay Antony",
+          "file": "Unn Perai Sollum"
+        },
+        {
+          "id": "Vaa Vaa Tamil Paiyaa",
+          "title": "Vaa Vaa Tamil Paiyaa",
+          "category": "Vijay Antony",
+          "file": "Vaa Vaa Tamil Paiyaa"
+        },
+        {
+          "id": "Vaa Vaa Uyire Vaa",
+          "title": "Vaa Vaa Uyire Vaa",
+          "category": "Vijay Antony",
+          "file": "Vaa Vaa Uyire Vaa"
+        },
+        {
+          "id": "Vadaka Therka",
+          "title": "Vadaka Therka",
+          "category": "Vijay Antony",
+          "file": "Vadaka Therka"
+        },
+        {
+          "id": "Yenge Poveno Enn",
+          "title": "Yenge Poveno Enn",
+          "category": "Vijay Antony",
+          "file": "Yenge Poveno Enn"
+        },
+        {
+          "id": "Yethanaiyo Katha Undu",
+          "title": "Yethanaiyo Katha Undu",
+          "category": "Vijay Antony",
+          "file": "Yethanaiyo Katha Undu"
+        }
+      ]
+    },
+    {
+      "id": "Yuvan Shankar Raja",
+      "name": "Yuvan Shankar Raja",
+      "description": "33 songs",
+      "tracks": [
+        {
+          "id": "A walk in the Park",
+          "title": "A walk in the Park",
+          "category": "Yuvan Shankar Raja",
+          "file": "A walk in the Park"
+        },
+        {
+          "id": "Agadam Bagadam",
+          "title": "Agadam Bagadam",
+          "category": "Yuvan Shankar Raja",
+          "file": "Agadam Bagadam"
+        },
+        {
+          "id": "Alai Paayum",
+          "title": "Alai Paayum",
+          "category": "Yuvan Shankar Raja",
+          "file": "Alai Paayum"
+        },
+        {
+          "id": "All at once",
+          "title": "All at once",
+          "category": "Yuvan Shankar Raja",
+          "file": "All at once"
+        },
+        {
+          "id": "Bhagavan Rap",
+          "title": "Bhagavan Rap",
+          "category": "Yuvan Shankar Raja",
+          "file": "Bhagavan Rap"
+        },
+        {
+          "id": "Bruised Ego",
+          "title": "Bruised Ego",
+          "category": "Yuvan Shankar Raja",
+          "file": "Bruised Ego"
+        },
+        {
+          "id": "Chosen One",
+          "title": "Chosen One",
+          "category": "Yuvan Shankar Raja",
+          "file": "Chosen One"
+        },
+        {
+          "id": "Dancing with Death",
+          "title": "Dancing with Death",
+          "category": "Yuvan Shankar Raja",
+          "file": "Dancing with Death"
+        },
+        {
+          "id": "Eisalaamey Eisalaam",
+          "title": "Eisalaamey Eisalaam",
+          "category": "Yuvan Shankar Raja",
+          "file": "Eisalaamey Eisalaam"
+        },
+        {
+          "id": "Friends for life",
+          "title": "Friends for life",
+          "category": "Yuvan Shankar Raja",
+          "file": "Friends for life"
+        },
+        {
+          "id": "Hide & Seek",
+          "title": "Hide & Seek",
+          "category": "Yuvan Shankar Raja",
+          "file": "Hide & Seek"
+        },
+        {
+          "id": "Idhu Porkkalama",
+          "title": "Idhu Porkkalama",
+          "category": "Yuvan Shankar Raja",
+          "file": "Idhu Porkkalama"
+        },
+        {
+          "id": "Impending Doom with Voice",
+          "title": "Impending Doom with Voice",
+          "category": "Yuvan Shankar Raja",
+          "file": "Impending Doom with Voice"
+        },
+        {
+          "id": "Impending Doom",
+          "title": "Impending Doom",
+          "category": "Yuvan Shankar Raja",
+          "file": "Impending Doom"
+        },
+        {
+          "id": "Inner Peace",
+          "title": "Inner Peace",
+          "category": "Yuvan Shankar Raja",
+          "file": "Inner Peace"
+        },
+        {
+          "id": "January Madham",
+          "title": "January Madham",
+          "category": "Yuvan Shankar Raja",
+          "file": "January Madham"
+        },
+        {
+          "id": "Kaatriley Nadanthene",
+          "title": "Kaatriley Nadanthene",
+          "category": "Yuvan Shankar Raja",
+          "file": "Kaatriley Nadanthene"
+        },
+        {
+          "id": "Kan Peasum Varthaigal",
+          "title": "Kan Peasum Varthaigal",
+          "category": "Yuvan Shankar Raja",
+          "file": "Kan Peasum Varthaigal"
+        },
+        {
+          "id": "Kanaa Kaanum Kaalangal 2",
+          "title": "Kanaa Kaanum Kaalangal 2",
+          "category": "Yuvan Shankar Raja",
+          "file": "Kanaa Kaanum Kaalangal 2"
+        },
+        {
+          "id": "Kanaa Kaanum Kaalangal",
+          "title": "Kanaa Kaanum Kaalangal",
+          "category": "Yuvan Shankar Raja",
+          "file": "Kanaa Kaanum Kaalangal"
+        },
+        {
+          "id": "Mella Sirithal",
+          "title": "Mella Sirithal",
+          "category": "Yuvan Shankar Raja",
+          "file": "Mella Sirithal"
+        },
+        {
+          "id": "Music of Joy",
+          "title": "Music of Joy",
+          "category": "Yuvan Shankar Raja",
+          "file": "Music of Joy"
+        },
+        {
+          "id": "Naam Vayathukku",
+          "title": "Naam Vayathukku",
+          "category": "Yuvan Shankar Raja",
+          "file": "Naam Vayathukku"
+        },
+        {
+          "id": "Ninaithu Ninaithu Parthal",
+          "title": "Ninaithu Ninaithu Parthal",
+          "category": "Yuvan Shankar Raja",
+          "file": "Ninaithu Ninaithu Parthal"
+        },
+        {
+          "id": "Ninaithu Ninaithu Parthen II",
+          "title": "Ninaithu Ninaithu Parthen II",
+          "category": "Yuvan Shankar Raja",
+          "file": "Ninaithu Ninaithu Parthen II"
+        },
+        {
+          "id": "Oru Thuli Vishamai",
+          "title": "Oru Thuli Vishamai",
+          "category": "Yuvan Shankar Raja",
+          "file": "Oru Thuli Vishamai"
+        },
+        {
+          "id": "Poovum Poovum",
+          "title": "Poovum Poovum",
+          "category": "Yuvan Shankar Raja",
+          "file": "Poovum Poovum"
+        },
+        {
+          "id": "Stranger in a new town",
+          "title": "Stranger in a new town",
+          "category": "Yuvan Shankar Raja",
+          "file": "Stranger in a new town"
+        },
+        {
+          "id": "Thappu Thanda",
+          "title": "Thappu Thanda",
+          "category": "Yuvan Shankar Raja",
+          "file": "Thappu Thanda"
+        },
+        {
+          "id": "Tusker Lords",
+          "title": "Tusker Lords",
+          "category": "Yuvan Shankar Raja",
+          "file": "Tusker Lords"
+        },
+        {
+          "id": "Walking Through The Rainbow",
+          "title": "Walking Through The Rainbow",
+          "category": "Yuvan Shankar Raja",
+          "file": "Walking Through The Rainbow"
+        },
+        {
+          "id": "Yaavum Poithaanaa",
+          "title": "Yaavum Poithaanaa",
+          "category": "Yuvan Shankar Raja",
+          "file": "Yaavum Poithaanaa"
+        },
+        {
+          "id": "Yennadi Seidhaai",
+          "title": "Yennadi Seidhaai",
+          "category": "Yuvan Shankar Raja",
+          "file": "Yennadi Seidhaai"
         }
       ]
     }
