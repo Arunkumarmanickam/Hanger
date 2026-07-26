@@ -1,5 +1,5 @@
 const GITHUB_USER = 'Arunkumarmanickam'
-const GITHUB_REPO = 'Hanger-Music'
+const GITHUB_REPO = 'Hanger'
 const BASE_AUDIO_URL = `https://cdn.jsdelivr.net/gh/${GITHUB_USER}/${GITHUB_REPO}@main/assets`
 
 let catalog = null
