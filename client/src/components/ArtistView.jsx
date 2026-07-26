@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { ArrowLeft, RefreshCw, Play, Disc3 } from 'lucide-react'
+import { ArrowLeft, Play, Disc3, Music } from 'lucide-react'
 import { getCategoryTracks } from '../utils/api'
 import { usePlayer } from '../context/PlayerContext'
 import SongCard from './SongCard'
@@ -24,25 +24,22 @@ export default function ArtistView({ categoryId, setActiveView }) {
       setTracks(data.tracks || [])
     } catch (err) {
       console.error('Failed to load category:', err)
-      setError('Failed to load tracks. The server might be starting up.')
+      setError('Failed to load tracks.')
     } finally {
       setLoading(false)
     }
   }
 
-  const handlePlayAll = () => {
-    playPlaylist(tracks, 0)
-  }
-
-  const handlePlayTrack = (track, index) => {
-    playTrack(track, tracks, index)
-  }
+  const handlePlayAll = () => playPlaylist(tracks, 0)
+  const handlePlayTrack = (track, index) => playTrack(track, tracks, index)
 
   if (loading) {
     return (
       <div className="flex items-center justify-center h-full">
-        <div className="flex flex-col items-center gap-3">
-          <RefreshCw size={32} className="text-hanger-accent animate-spin" />
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-12 h-12 rounded-2xl accent-gradient flex items-center justify-center animate-pulse">
+            <Disc3 size={24} className="text-white animate-spin-slow" />
+          </div>
           <p className="text-hanger-muted text-sm">Finding tracks...</p>
         </div>
       </div>
@@ -53,74 +50,59 @@ export default function ArtistView({ categoryId, setActiveView }) {
     return (
       <div className="flex flex-col items-center justify-center h-full p-6">
         <div className="w-20 h-20 rounded-full bg-hanger-card flex items-center justify-center mb-4">
-          <Disc3 size={36} className="text-hanger-muted" />
+          <Disc3 size={36} className="text-hanger-muted/50" />
         </div>
         <p className="text-hanger-muted text-sm mb-4">{error}</p>
-        <button
-          onClick={loadCategory}
-          className="px-4 py-2 text-sm font-medium text-black accent-gradient rounded-lg hover:opacity-90 transition-all"
-        >
+        <button onClick={loadCategory} className="px-5 py-2 text-sm font-medium text-white accent-gradient rounded-xl hover:opacity-90 transition-all">
           Retry
         </button>
       </div>
     )
   }
 
+  const trackCount = tracks.length
+
   return (
-    <div className="h-full overflow-y-auto">
+    <div className="h-full overflow-y-auto animate-fade-in">
       <div className="relative">
-        <div className="h-48 bg-gradient-to-b from-hanger-accent/20 via-hanger-accent/5 to-hanger-bg flex items-end p-6">
+        <div className="h-56 bg-gradient-to-b from-hanger-accent/15 via-hanger-accent2/5 to-hanger-bg flex items-end p-6">
           <button
             onClick={() => setActiveView('home')}
-            className="absolute top-4 left-4 p-2 rounded-full bg-black/30 text-white hover:bg-black/50 transition-all"
+            className="absolute top-4 left-4 p-2 rounded-xl bg-black/40 text-white/80 hover:text-white hover:bg-black/60 transition-all backdrop-blur-sm"
           >
             <ArrowLeft size={18} />
           </button>
           <div className="flex items-center gap-5">
-            <div className="w-24 h-24 rounded-2xl accent-gradient flex items-center justify-center shadow-2xl neon-glow">
-              <Disc3 size={44} className="text-white" />
+            <div className="w-28 h-28 rounded-2xl accent-gradient flex items-center justify-center shadow-2xl shadow-hanger-accent/20">
+              <Music size={52} className="text-white" />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-hanger-muted">
-                {category?.description?.includes('Badaga') ? 'Culture' : 'Artist'}
+              <p className="text-xs font-semibold uppercase tracking-widest text-hanger-muted/60">
+                Director
               </p>
-              <h1 className="text-3xl font-bold text-hanger-text mt-1">
-                {category?.name || 'Unknown'}
-              </h1>
-              <p className="text-sm text-hanger-muted mt-1">
-                {tracks.length} track{tracks.length !== 1 ? 's' : ''}
-              </p>
+              <h1 className="text-3xl font-bold text-white mt-1">{category?.name || 'Unknown'}</h1>
+              <p className="text-sm text-hanger-muted/70 mt-1">{trackCount} track{trackCount !== 1 ? 's' : ''}</p>
             </div>
           </div>
         </div>
 
-        <div className="px-6 py-4">
+        <div className="px-6 py-4 flex items-center gap-3">
           <button
             onClick={handlePlayAll}
-            className="flex items-center gap-2 px-6 py-3 accent-gradient text-black font-semibold rounded-full hover:scale-105 transition-transform neon-glow"
+            className="flex items-center gap-2 px-6 py-3 accent-gradient text-white font-semibold rounded-full hover:scale-105 transition-transform shadow-lg shadow-hanger-accent/20"
           >
-            <Play size={18} fill="black" />
+            <Play size={16} fill="white" />
             Play All
-          </button>
-          <button
-            onClick={loadCategory}
-            className="ml-3 p-3 rounded-full text-hanger-muted hover:text-hanger-accent hover:bg-hanger-card transition-all"
-            title="Refresh"
-          >
-            <RefreshCw size={16} />
           </button>
         </div>
 
         <div className="px-6 pb-6 space-y-0.5">
           {tracks.length === 0 ? (
-            <div className="flex flex-col items-center justify-center py-12 text-hanger-muted">
-              <Disc3 size={40} className="mb-3 opacity-30" />
-              <p className="text-sm">No tracks found yet</p>
-              <button
-                onClick={loadCategory}
-                className="mt-3 text-xs text-hanger-accent hover:underline"
-              >
-                Try refreshing
+            <div className="flex flex-col items-center justify-center py-16 text-hanger-muted">
+              <Disc3 size={40} className="mb-3 opacity-20" />
+              <p className="text-sm">No tracks found</p>
+              <button onClick={loadCategory} className="mt-3 text-xs text-hanger-accent hover:underline">
+                Refresh
               </button>
             </div>
           ) : (
@@ -128,6 +110,7 @@ export default function ArtistView({ categoryId, setActiveView }) {
               <SongCard
                 key={track.id}
                 track={track}
+                index={idx}
                 onPlay={() => handlePlayTrack(track, idx)}
               />
             ))

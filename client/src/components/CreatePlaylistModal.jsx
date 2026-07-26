@@ -22,68 +22,62 @@ export default function CreatePlaylistModal({ onClose, onCreated }) {
   }
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={onClose}>
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm" onClick={onClose}>
       <div
-        className="w-full max-w-md glass rounded-2xl border border-hanger-border shadow-2xl neon-glow"
+        className="w-full max-w-md glass rounded-2xl border border-hanger-border/40 shadow-2xl animate-fade-in"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between p-5 border-b border-hanger-border/50">
+        <div className="flex items-center justify-between p-5 border-b border-hanger-border/20">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg accent-gradient flex items-center justify-center">
-              <Music size={16} className="text-white" />
+            <div className="w-8 h-8 rounded-xl accent-gradient flex items-center justify-center">
+              <Music size={15} className="text-white" />
             </div>
             <h2 className="text-lg font-bold text-hanger-text">Create Playlist</h2>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-full text-hanger-muted hover:text-hanger-text hover:bg-hanger-hover transition-all"
+            className="p-1.5 rounded-lg text-hanger-muted/60 hover:text-hanger-text hover:bg-hanger-hover/50 transition-all"
           >
-            <X size={18} />
+            <X size={17} />
           </button>
         </div>
 
         <form onSubmit={handleSubmit} className="p-5 space-y-4">
           <div>
-            <label className="block text-xs font-medium text-hanger-muted mb-1.5">
-              Playlist Name
-            </label>
+            <label className="block text-xs font-medium text-hanger-muted/70 mb-1.5">Playlist Name</label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="My Awesome Playlist"
-              className="w-full px-3.5 py-2.5 bg-hanger-bg border border-hanger-border rounded-lg text-sm text-hanger-text placeholder-hanger-muted/40 focus:outline-none focus:border-hanger-accent focus:ring-1 focus:ring-hanger-accent/30 transition-all"
+              className="w-full px-3.5 py-2.5 bg-hanger-bg border border-hanger-border/50 rounded-xl text-sm text-hanger-text placeholder-hanger-muted/30 focus:outline-none focus:border-hanger-accent/50 focus:ring-1 focus:ring-hanger-accent/20 transition-all"
               autoFocus
               maxLength={100}
             />
           </div>
-
           <div>
-            <label className="block text-xs font-medium text-hanger-muted mb-1.5">
-              Description (optional)
-            </label>
+            <label className="block text-xs font-medium text-hanger-muted/70 mb-1.5">Description (optional)</label>
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Add a description..."
               rows={3}
-              className="w-full px-3.5 py-2.5 bg-hanger-bg border border-hanger-border rounded-lg text-sm text-hanger-text placeholder-hanger-muted/40 focus:outline-none focus:border-hanger-accent focus:ring-1 focus:ring-hanger-accent/30 transition-all resize-none"
+              className="w-full px-3.5 py-2.5 bg-hanger-bg border border-hanger-border/50 rounded-xl text-sm text-hanger-text placeholder-hanger-muted/30 focus:outline-none focus:border-hanger-accent/50 focus:ring-1 focus:ring-hanger-accent/20 transition-all resize-none"
               maxLength={300}
             />
           </div>
-
           <div className="flex gap-3 pt-2">
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 px-4 py-2.5 text-sm font-medium text-hanger-muted hover:text-hanger-text border border-hanger-border rounded-lg hover:bg-hanger-hover/50 transition-all"
+              className="flex-1 px-4 py-2.5 text-sm font-medium text-hanger-muted/70 hover:text-hanger-text border border-hanger-border/50 rounded-xl hover:bg-hanger-hover/30 transition-all"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={!name.trim() || loading}
-              className="flex-1 px-4 py-2.5 text-sm font-medium text-black accent-gradient rounded-lg hover:opacity-90 transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+              className="flex-1 px-4 py-2.5 text-sm font-medium text-white accent-gradient rounded-xl hover:opacity-90 transition-all disabled:opacity-30 disabled:cursor-not-allowed"
             >
               {loading ? 'Creating...' : 'Create'}
             </button>

@@ -30,98 +30,85 @@ export default function Sidebar({ activeView, setActiveView, refreshPlaylists })
     }
   }
 
-  const NavItem = ({ icon: Icon, label, view, isActive }) => (
-    <button
-      onClick={() => setActiveView(view)}
-      className={`flex items-center gap-3 w-full px-4 py-2.5 rounded-lg transition-all duration-200 ${
-        isActive
-          ? 'bg-hanger-accent/10 text-hanger-accent neon-text'
-          : 'text-hanger-muted hover:text-hanger-text hover:bg-hanger-hover/50'
-      }`}
-    >
-      <Icon size={20} />
-      <span className="font-medium text-sm">{label}</span>
-    </button>
-  )
+  const NavItem = ({ icon: Icon, label, view }) => {
+    const isActive = activeView === view
+    return (
+      <button
+        onClick={() => setActiveView(view)}
+        className={`relative flex items-center gap-3 w-full px-3 py-2.5 rounded-xl transition-all duration-200 group ${
+          isActive
+            ? 'bg-gradient-to-r from-hanger-accent/10 to-hanger-accent2/5 text-white'
+            : 'text-hanger-muted hover:text-hanger-text hover:bg-hanger-hover/40'
+        }`}
+      >
+        {isActive && (
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-5 rounded-full accent-gradient" />
+        )}
+        <Icon size={20} className={isActive ? 'text-hanger-accent' : ''} />
+        <span className={`text-sm font-medium ${isActive ? 'font-semibold' : ''}`}>{label}</span>
+      </button>
+    )
+  }
 
   return (
     <>
-      <aside className="w-64 h-full flex flex-col glass border-r border-hanger-border">
-        <div className="p-5 border-b border-hanger-border/50">
+      <aside className="w-60 h-full flex flex-col bg-hanger-bg/80 border-r border-hanger-border/30">
+        <div className="px-4 pt-5 pb-4">
           <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-lg accent-gradient flex items-center justify-center">
-              <Disc3 size={20} className="text-white" />
+            <div className="w-9 h-9 rounded-xl accent-gradient flex items-center justify-center shadow-lg shadow-hanger-accent/20">
+              <Disc3 size={18} className="text-white" />
             </div>
-            <h1 className="text-xl font-bold">
-              <span className="text-hanger-accent">Han</span>
-              <span className="text-white">ger</span>
+            <h1 className="text-lg font-bold">
+              <span className="accent-gradient-text">Han</span>
+              <span className="text-hanger-text">ger</span>
             </h1>
           </div>
         </div>
 
-        <nav className="flex-1 p-3 space-y-1 overflow-y-auto">
-          <div className="mb-2">
-            <p className="text-xs font-semibold uppercase tracking-wider text-hanger-muted/60 px-3 mb-2">
+        <nav className="flex-1 px-2 space-y-0.5 overflow-y-auto">
+          <div className="mb-1">
+            <p className="text-[10px] font-semibold uppercase tracking-widest text-hanger-muted/40 px-3 pb-1.5">
               Menu
             </p>
-            <NavItem
-              icon={Home}
-              label="Home"
-              view="home"
-              isActive={activeView === 'home'}
-            />
-            <NavItem
-              icon={Search}
-              label="Search"
-              view="search"
-              isActive={activeView === 'search'}
-            />
-            <NavItem
-              icon={Library}
-              label="Your Library"
-              view="library"
-              isActive={activeView === 'library'}
-            />
+            <NavItem icon={Home} label="Home" view="home" />
+            <NavItem icon={Search} label="Search" view="search" />
+            <NavItem icon={Library} label="Library" view="library" />
           </div>
 
-          <div className="pt-4 border-t border-hanger-border/50">
-            <div className="flex items-center justify-between px-3 mb-2">
-              <p className="text-xs font-semibold uppercase tracking-wider text-hanger-muted/60">
+          <div className="pt-4 mt-2 border-t border-hanger-border/20">
+            <div className="flex items-center justify-between px-3 mb-1.5">
+              <p className="text-[10px] font-semibold uppercase tracking-widest text-hanger-muted/40">
                 Playlists
               </p>
               <button
                 onClick={() => setShowCreateModal(true)}
-                className="p-1 rounded-md text-hanger-muted hover:text-hanger-accent hover:bg-hanger-hover/50 transition-all"
+                className="p-1 rounded-lg text-hanger-muted/60 hover:text-hanger-accent hover:bg-hanger-hover/50 transition-all"
                 title="Create Playlist"
               >
-                <Plus size={16} />
+                <Plus size={14} />
               </button>
             </div>
 
             {playlists.length === 0 && (
-              <p className="text-xs text-hanger-muted/50 px-3 py-2 italic">
-                No playlists yet
-              </p>
+              <p className="text-xs text-hanger-muted/40 px-3 py-3 italic">No playlists yet</p>
             )}
 
             {playlists.map((pl) => (
               <button
                 key={pl.id}
                 onClick={() => setActiveView(`playlist-${pl.id}`)}
-                className={`flex items-center gap-3 w-full px-3 py-2 rounded-lg text-sm transition-all group ${
+                className={`flex items-center gap-3 w-full px-3 py-2 rounded-xl text-sm transition-all group ${
                   activeView === `playlist-${pl.id}`
-                    ? 'bg-hanger-accent/10 text-hanger-accent'
-                    : 'text-hanger-muted hover:text-hanger-text hover:bg-hanger-hover/50'
+                    ? 'bg-gradient-to-r from-hanger-accent/10 to-hanger-accent2/5 text-white'
+                    : 'text-hanger-muted/80 hover:text-hanger-text hover:bg-hanger-hover/40'
                 }`}
               >
-                <ListMusic size={16} />
+                <ListMusic size={15} className="flex-shrink-0" />
                 <span className="truncate flex-1 text-left">{pl.name}</span>
-                <span className="text-xs text-hanger-muted/40 opacity-0 group-hover:opacity-100 transition-opacity">
-                  {pl.tracks.length}
-                </span>
+                <span className="text-[10px] text-hanger-muted/30">{pl.tracks.length}</span>
                 <button
                   onClick={(e) => handleDeletePlaylist(e, pl.id)}
-                  className="opacity-0 group-hover:opacity-100 text-hanger-muted/40 hover:text-red-400 transition-all text-xs"
+                  className="opacity-0 group-hover:opacity-100 text-hanger-muted/30 hover:text-red-400 transition-all text-xs"
                 >
                   ×
                 </button>
@@ -130,11 +117,9 @@ export default function Sidebar({ activeView, setActiveView, refreshPlaylists })
           </div>
         </nav>
 
-        <div className="p-3 border-t border-hanger-border/50">
-          <div className="px-3 py-2 rounded-lg bg-hanger-accent/5 border border-hanger-accent/10">
-            <p className="text-[10px] text-hanger-muted/50">
-              Hanger v1.0
-            </p>
+        <div className="px-2 py-3 border-t border-hanger-border/20">
+          <div className="px-3 py-2 rounded-lg bg-hanger-card/50">
+            <p className="text-[9px] text-hanger-muted/40 tracking-wider uppercase">Hanger v1.0</p>
           </div>
         </div>
       </aside>

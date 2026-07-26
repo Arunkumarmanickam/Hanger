@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { ArrowLeft, Play, Trash2, ListMusic, RefreshCw } from 'lucide-react'
+import { ArrowLeft, Play, Trash2, ListMusic, Disc3 } from 'lucide-react'
 import { getPlaylist, deletePlaylist, removeTrackFromPlaylist } from '../utils/api'
 import { usePlayer } from '../context/PlayerContext'
 import SongCard from './SongCard'
@@ -9,9 +9,7 @@ export default function PlaylistView({ playlistId, setActiveView, refreshPlaylis
   const [loading, setLoading] = useState(true)
   const { playTrack, playPlaylist } = usePlayer()
 
-  useEffect(() => {
-    loadPlaylist()
-  }, [playlistId])
+  useEffect(() => { loadPlaylist() }, [playlistId])
 
   const loadPlaylist = async () => {
     setLoading(true)
@@ -26,14 +24,10 @@ export default function PlaylistView({ playlistId, setActiveView, refreshPlaylis
   }
 
   const handlePlayAll = () => {
-    if (playlist?.tracks?.length) {
-      playPlaylist(playlist.tracks, 0)
-    }
+    if (playlist?.tracks?.length) playPlaylist(playlist.tracks, 0)
   }
 
-  const handlePlayTrack = (track, index) => {
-    playTrack(track, playlist.tracks, index)
-  }
+  const handlePlayTrack = (track, index) => playTrack(track, playlist.tracks, index)
 
   const handleRemoveTrack = async (trackId) => {
     try {
@@ -58,7 +52,7 @@ export default function PlaylistView({ playlistId, setActiveView, refreshPlaylis
   if (loading) {
     return (
       <div className="flex items-center justify-center h-full">
-        <RefreshCw size={32} className="text-hanger-accent animate-spin" />
+        <Disc3 size={24} className="text-hanger-accent animate-spin" />
       </div>
     )
   }
@@ -66,12 +60,9 @@ export default function PlaylistView({ playlistId, setActiveView, refreshPlaylis
   if (!playlist) {
     return (
       <div className="flex flex-col items-center justify-center h-full p-6">
-        <ListMusic size={48} className="text-hanger-muted/30 mb-4" />
+        <ListMusic size={48} className="text-hanger-muted/20 mb-4" />
         <p className="text-hanger-muted">Playlist not found</p>
-        <button
-          onClick={() => setActiveView('home')}
-          className="mt-4 text-sm text-hanger-accent hover:underline"
-        >
+        <button onClick={() => setActiveView('home')} className="mt-4 text-sm text-hanger-accent hover:underline">
           Go home
         </button>
       </div>
@@ -81,32 +72,26 @@ export default function PlaylistView({ playlistId, setActiveView, refreshPlaylis
   const tracks = playlist.tracks || []
 
   return (
-    <div className="h-full overflow-y-auto">
+    <div className="h-full overflow-y-auto animate-fade-in">
       <div className="relative">
-        <div className="h-48 bg-gradient-to-b from-hanger-accent2/20 via-hanger-accent2/5 to-hanger-bg flex items-end p-6">
+        <div className="h-52 bg-gradient-to-b from-hanger-accent/15 via-hanger-accent2/5 to-hanger-bg flex items-end p-6">
           <button
             onClick={() => setActiveView('home')}
-            className="absolute top-4 left-4 p-2 rounded-full bg-black/30 text-white hover:bg-black/50 transition-all"
+            className="absolute top-4 left-4 p-2 rounded-xl bg-black/40 text-white/80 hover:text-white hover:bg-black/60 transition-all backdrop-blur-sm"
           >
             <ArrowLeft size={18} />
           </button>
           <div className="flex items-center gap-5">
-            <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-hanger-accent to-hanger-accent2 flex items-center justify-center shadow-2xl">
-              <ListMusic size={40} className="text-white" />
+            <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-hanger-accent to-hanger-accent2 flex items-center justify-center shadow-2xl shadow-hanger-accent/20">
+              <ListMusic size={38} className="text-white" />
             </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-hanger-muted">
-                Playlist
-              </p>
-              <h1 className="text-3xl font-bold text-hanger-text mt-1">
-                {playlist.name}
-              </h1>
+            <div className="flex-1 min-w-0">
+              <p className="text-xs font-semibold uppercase tracking-widest text-hanger-muted/60">Playlist</p>
+              <h1 className="text-2xl font-bold text-white mt-1 truncate">{playlist.name}</h1>
               {playlist.description && (
-                <p className="text-sm text-hanger-muted mt-1">{playlist.description}</p>
+                <p className="text-sm text-hanger-muted/60 mt-0.5 truncate">{playlist.description}</p>
               )}
-              <p className="text-sm text-hanger-muted mt-1">
-                {tracks.length} track{tracks.length !== 1 ? 's' : ''}
-              </p>
+              <p className="text-sm text-hanger-muted/60 mt-1">{tracks.length} track{tracks.length !== 1 ? 's' : ''}</p>
             </div>
           </div>
         </div>
@@ -115,18 +100,17 @@ export default function PlaylistView({ playlistId, setActiveView, refreshPlaylis
           {tracks.length > 0 && (
             <button
               onClick={handlePlayAll}
-              className="flex items-center gap-2 px-6 py-3 accent-gradient text-black font-semibold rounded-full hover:scale-105 transition-transform neon-glow"
+              className="flex items-center gap-2 px-6 py-3 accent-gradient text-white font-semibold rounded-full hover:scale-105 transition-transform shadow-lg shadow-hanger-accent/20"
             >
-              <Play size={18} fill="black" />
+              <Play size={16} fill="white" />
               Play All
             </button>
           )}
           <button
             onClick={handleDeletePlaylist}
-            className="p-3 rounded-full text-hanger-muted hover:text-red-400 hover:bg-hanger-card/50 transition-all"
-            title="Delete Playlist"
+            className="p-3 rounded-xl text-hanger-muted/40 hover:text-red-400 hover:bg-hanger-hover/40 transition-all"
           >
-            <Trash2 size={16} />
+            <Trash2 size={15} />
           </button>
         </div>
 
@@ -135,15 +119,14 @@ export default function PlaylistView({ playlistId, setActiveView, refreshPlaylis
             <div className="flex flex-col items-center justify-center py-16 text-hanger-muted">
               <ListMusic size={48} className="mb-4 opacity-20" />
               <p className="text-sm font-medium">This playlist is empty</p>
-              <p className="text-xs mt-1 opacity-60">
-                Add songs from any artist or search page
-              </p>
+              <p className="text-xs mt-1 text-hanger-muted/40">Add songs from any artist or search page</p>
             </div>
           ) : (
             tracks.map((track, idx) => (
               <SongCard
                 key={track.id}
                 track={track}
+                index={idx}
                 onPlay={() => handlePlayTrack(track, idx)}
                 isInPlaylist
                 onRemove={handleRemoveTrack}
